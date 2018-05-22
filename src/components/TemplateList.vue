@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="wrap" v-bind:class="{ animate_in: animateInClass, animate_out: animateOutClass }">
     <div class="heading">
       <h1 v-html="activeList.headline"></h1>
     </div>
@@ -18,7 +18,9 @@
 export default {
   data: function() {
     return {
-      activeListId: 1
+      activeListId: 1,
+      animateInClass: false,
+      animateOutClass: false
     }
   },
   computed: {
@@ -27,22 +29,24 @@ export default {
     },
     activeList() {
       return this.activeScene.lists[this.activeListId];
-    },
-    listCount() {
-      return Object.keys(this.activeScene.lists).length;
-    },
-    fileName() {
-      return require('../assets/event_list_reference.png');
     }
   },
   created: function () {
-    this.listOut();
+    this.animateIn();
+    this.animateOut();
   },
   methods: {
-    listOut() {
-      var listDuration = this.activeList.duration * 1000; // In Milliseconds
+    animateIn() {
       setTimeout( () => {
-        // console.log('listOut')
+        this.animateInClass = true;
+        this.animateOutClass = false;
+      }, 500);
+    },
+    animateOut() {
+      var listDuration = (this.activeList.duration - 2)  * 1000; // In Milliseconds
+      setTimeout( () => {
+        this.animateInClass = false;
+        this.animateOutClass = true;
       }, listDuration);
     }
   }
@@ -99,6 +103,7 @@ export default {
   .events {
     position: relative;
     flex-grow: 1;
+    overflow: hidden;
 
     &:before,
     &:after {
@@ -109,7 +114,7 @@ export default {
       z-index: 1;
       background: white;
       height: 3px;
-      width: 100%;
+      width: 0%;
     }
     &:before {
       top: 0;
@@ -122,6 +127,103 @@ export default {
   .event {
     padding: 35px 0;
     border-top: 3px solid white;
+
+    &:first-child {
+      margin-top: 20px;
+      border-top: 3px solid transparent;
+    }
+  }
+
+  // Animation
+  //------------------------------------------
+
+  // Lines
+  .events:before,
+  .events:after {
+    width: 0%;
+  }
+  .animate_in .events:before,
+  .animate_in .events:after {
+    width: 100%;
+    transition: width 2s ease-out;
+  }
+  .animate_out .events:before,
+  .animate_out .events:after {
+    width: 0%;
+    transition: width 2s ease-in;
+  }
+
+  // Event List
+  .events .event:first-child {
+    margin-top: 0;
+    opacity: 0;
+  }
+  .animate_in .event:first-child {
+    opacity: 1;
+    animation: event-first-in 2s;
+  }
+  .animate_out .event:first-child {
+    animation: event-first-out 2s;
+  }
+  @keyframes event-first-in {
+    0%   { opacity: 0; margin-top: 20px; }
+    30%  { opacity: 0; margin-top: 20px; }
+    100% { opacity: 1; margin-top: 0; }
+  }
+  @keyframes event-first-out {
+    0%   { opacity: 1; margin-top: 0; }
+    30%  { opacity: 1; margin-top: 0; }
+    100% { opacity: 0; margin-top: 20px; }
+  }
+
+  .event {
+    opacity: 0;
+  }
+  .animate_in .event {
+    opacity: 1;
+    animation: event-in 2s;
+  }
+  .animate_out .event {
+    animation: event-out 2s;
+  }
+  @keyframes event-in {
+    0%   { opacity: 0; }
+    30%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes event-out {
+    0%   { opacity: 1; }
+    30%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+  // Heading
+  .heading {
+    position: relative;
+    opacity: 0;
+    top: 20px;
+  }
+  .animate_in .heading {
+    opacity: 1;
+    top: 0;
+    animation: heading-in 2s;
+  }
+  .animate_out .heading {
+    animation: heading-out 2s;
+  }
+
+  @keyframes heading-in {
+    0%   { opacity: 0; top: 20px; }
+    30%  { opacity: 0; top: 20px; }
+    60% { opacity: 1; top: 0;}
+    100% { opacity: 1; top: 0;}
+  }
+  @keyframes heading-out {
+    0%   { opacity: 1; top: 0; }
+    30%  { opacity: 1; top: 0; }
+    60% { opacity: 0; top: 20px; }
+    100% { opacity: 0; top: 20px; }
   }
 
 </style>
