@@ -9,6 +9,7 @@
         <h3>{{ item.subtitle }}</h3>
         <h4>{{ item.logistics }}</h4>
         <p>{{ item.description }}</p>
+        <img v-if="item.logo" :src="'/static/' + item.logo" />
       </div>
     </div>
   </div>
@@ -91,7 +92,9 @@ export default {
     font-size: 16px;
     font-weight: normal;
   }
-
+  img {
+    margin: 30px 0 0 0;
+  }
   .wrap {
     display: flex;
     flex-direction: column;
