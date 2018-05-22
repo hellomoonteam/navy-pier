@@ -35,9 +35,6 @@ export default {
     },
     activeScene() {
       return this.$store.getters.activeScene;
-    },
-    fileName() {
-      return require('./assets/event_list_reference.png');
     }
   },
   components: {
@@ -88,7 +85,7 @@ $screen: 640px;
   top: 10px;
   width: $screen;
   height: 1260px;
-  border: 1px solid red;
+  border: 1px solid white;
 }
 .screen-a {
   left: $gutter * .5;
