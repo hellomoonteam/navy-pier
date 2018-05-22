@@ -6,9 +6,9 @@
     <div class="events">
       <div v-for="item in activeList.events" v-bind:key="item.title" class="event">
         <h2>{{ item.title }}</h2>
-        <h3>{{ item.subtitle }}</h3>
-        <h4>{{ item.logistics }}</h4>
-        <p>{{ item.description }}</p>
+        <h3 v-if="item.subtitle">{{ item.subtitle }}</h3>
+        <h4 v-if="item.logistics">{{ item.logistics }}</h4>
+        <p v-if="item.description">{{ item.description }}</p>
         <img v-if="item.logo" :src="'/static/' + item.logo" />
       </div>
     </div>

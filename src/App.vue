@@ -13,7 +13,9 @@
     <div class="screen-a">
       <component :is="this.activeScene.template"></component>
     </div>
-    <div class="screen-b"></div>
+    <div class="screen-b">
+      <component :is="this.activeScene.template4"></component>
+    </div>
     <div class="screen-c"></div>
     <div class="screen-d"></div>
   </div>
@@ -24,6 +26,8 @@ import BackgroundVideo from './components/BackgroundVideo.vue';
 import BackgroundVideoFade from './components/BackgroundVideoFade.vue';
 import TemplateVideo from './components/TemplateVideo.vue';
 import TemplateList from './components/TemplateList.vue';
+import TemplateCountdown from './components/TemplateCountdown.vue';
+import TemplateBlank from './components/TemplateBlank.vue';
 
 export default {
   computed: {
@@ -42,6 +46,8 @@ export default {
     BackgroundVideoFade,
     TemplateVideo,
     TemplateList,
+    TemplateCountdown,
+    TemplateBlank
   },
   created: function () {
     this.sceneLoad();

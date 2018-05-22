@@ -11,18 +11,21 @@ export const store = new Vuex.Store({
     scenes: {
       1: {
         template: 'video',
-        background: 'bg1.mp4',
+        template4: 'TemplateCountdown',
+        background: 'bg2.mp4',
         duration: '10'
       },
       2: {
         template: 'video',
-        background: 'bg2.mp4',
-        duration: '10'
+        template4: null,
+        background: 'bg3.mp4',
+        duration: '7'
       },
       3: {
         name: 'events',
         template: 'TemplateList',
-        background: 'bg3.mp4',
+        template4: null,
+        background: 'bg1.mp4',
         myimage: 'event_list_reference.png',
         duration: '10',
         lists: {
@@ -34,20 +37,20 @@ export const store = new Vuex.Store({
                 title: 'Chicago World Music Festival and World Dumpling Festival',
                 subtitle: 'Presented by Fifth Third Bank',
                 logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br> Aenean commodo ligula eget dolor. Aenan massa.',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
                 logo: 'fifth_third_logo.png'
               },
               2: {
                 title: 'One of the Medium Titles Example',
                 subtitle: 'Presented by Fifth Third Bank',
                 logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br> Aenean commodo ligula eget dolor. Aenan massa.'
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
               },
               3: {
                 title: 'Short Title',
                 subtitle: 'Presented by Fifth Third Bank',
                 logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br> Aenean commodo ligula eget dolor. Aenan massa.'
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
               }
             }
           }
