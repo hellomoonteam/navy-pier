@@ -3,10 +3,7 @@
 
     <!-- background -->
     <div class="background">
-      <BackgroundVideo></BackgroundVideo>
-    </div>
-    <div class="background">
-      <BackgroundVideoFade></BackgroundVideoFade>
+      <BackgroundVids></BackgroundVids>
     </div>
 
     <!-- foreground -->
@@ -22,8 +19,7 @@
 </template>
 
 <script>
-import BackgroundVideo from './components/BackgroundVideo.vue';
-import BackgroundVideoFade from './components/BackgroundVideoFade.vue';
+import BackgroundVids from './components/BackgroundVids.vue';
 import TemplateVideo from './components/TemplateVideo.vue';
 import TemplateList from './components/TemplateList.vue';
 import TemplateCountdown from './components/TemplateCountdown.vue';
@@ -42,8 +38,7 @@ export default {
     }
   },
   components: {
-    BackgroundVideo,
-    BackgroundVideoFade,
+    BackgroundVids,
     TemplateVideo,
     TemplateList,
     TemplateCountdown,
@@ -89,6 +84,7 @@ $screen: 640px;
 .screen-d {
   position: absolute;
   top: 10px;
+  z-index: 3;
   width: $screen;
   height: 1260px;
   border: 1px solid white;

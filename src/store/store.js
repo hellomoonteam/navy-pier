@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     current: {
-      scene: 3,
+      scene: 2,
     },
     scenes: {
       1: {
