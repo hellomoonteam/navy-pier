@@ -3,17 +3,20 @@
     <div class="heading">
       <h1 v-html="activeList.headline"></h1>
     </div>
-    <div class="events">
-      <div v-for="item in activeList.events" v-bind:key="item.title" class="event">
-        <h2>{{ item.title }}</h2>
-        <h3 v-if="item.subtitle">{{ item.subtitle }}</h3>
-        <h4 v-if="item.logistics">{{ item.logistics }}</h4>
-        <p v-if="item.description">{{ item.description }}</p>
-        <img v-if="item.logo" :src="'/static/' + item.logo" />
+    <div class="events-wrap" id="events-wrap">
+      <div class="events" id="events" v-bind:style="{ marginTop: topMargin }">
+          <div v-for="item in activeList.events" v-bind:key="item.title" class="event">
+            <h2>{{ item.title }}</h2>
+            <h3 v-if="item.subtitle">{{ item.subtitle }}</h3>
+            <h4 v-if="item.logistics">{{ item.logistics }}</h4>
+            <p v-if="item.description">{{ item.description }}</p>
+            <img v-if="item.logo" :src="'/static/' + item.logo" />
+          </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -21,7 +24,10 @@ export default {
     return {
       activeListId: 1,
       animateInClass: false,
-      animateOutClass: false
+      animateOutClass: false,
+      eventsToCycle: 0,       // Number events to cycle through so we see entire list
+      currentEvent: 1,        // The event currently at the top of the list
+      topMargin: 0
     }
   },
   computed: {
@@ -36,6 +42,32 @@ export default {
     this.animateIn();
     this.animateOut();
   },
+  mounted: function() {
+    var eventsEl = document.getElementById('events');
+    var eventsTotal = eventsEl.children.length;
+    var eventsVisible = 0;
+    var wrapHeight = document.getElementById('events-wrap').offsetHeight;
+    var contentHeight = 0;
+
+    // Calcular contentHeight and visibleEvents
+    for (var i = 0; i < eventsTotal; i++) {
+      var event = eventsEl.children[i];
+      var eventHeight = event.offsetHeight;
+      contentHeight += eventHeight;
+      if (contentHeight < wrapHeight) {
+        eventsVisible += 1;
+      }
+    }
+
+
+    // How many events to cycle
+    this.eventsToCycle = eventsTotal - eventsVisible;
+
+    // Animate List
+    if (this.eventsToCycle > 0) {
+      this.cycleList();
+    }
+  },
   methods: {
     animateIn() {
       setTimeout( () => {
@@ -49,10 +81,32 @@ export default {
         this.animateInClass = false;
         this.animateOutClass = true;
       }, listDuration);
+    },
+    cycleList() {
+      var duration = (this.activeList.duration / (this.eventsToCycle + 1))  * 1000; // In Milliseconds
+      setTimeout( () => {
+
+        // Set top margin
+        var eventsEl = document.getElementById('events');
+        var topMargin = 0;
+        for (var i = 0; i < this.currentEvent; i++) {
+          var event = eventsEl.children[i];
+          topMargin += event.offsetHeight;
+        }
+        this.topMargin = (topMargin * -1) + 'px';
+
+        // Next cycle
+        if (this.currentEvent < this.eventsToCycle) {
+          this.currentEvent += 1;
+          this.cycleList();
+        }
+
+      }, duration);
     }
   }
 }
 </script>
+
 
 <style scoped lang="scss">
   h1, h2, h3, h4, p {
@@ -103,7 +157,7 @@ export default {
     box-sizing: border-box;
   }
 
-  .events {
+  .events-wrap {
     position: relative;
     flex-grow: 1;
     overflow: hidden;
@@ -141,22 +195,26 @@ export default {
   //------------------------------------------
 
   // Lines
-  .events:before,
-  .events:after {
+  .events-wrap:before,
+  .events-wrap:after {
     width: 0%;
   }
-  .animate_in .events:before,
-  .animate_in .events:after {
+  .animate_in .events-wrap:before,
+  .animate_in .events-wrap:after {
     width: 100%;
     transition: width 2s ease-out;
   }
-  .animate_out .events:before,
-  .animate_out .events:after {
+  .animate_out .events-wrap:before,
+  .animate_out .events-wrap:after {
     width: 0%;
     transition: width 2s ease-in;
   }
 
+
   // Event List
+  .events {
+    transition: margin-top 2s ease-out;
+  }
   .events .event:first-child {
     margin-top: 0;
     opacity: 0;

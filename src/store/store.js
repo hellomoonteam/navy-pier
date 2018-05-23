@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     current: {
-      scene: 1,
+      scene: 3,
     },
     scenes: {
       1: {
@@ -27,11 +27,11 @@ export const store = new Vuex.Store({
         template4: null,
         background: 'bg1.mp4',
         myimage: 'event_list_reference.png',
-        duration: '10',
+        duration: '20',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '10',
+            duration: '20',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -51,7 +51,20 @@ export const store = new Vuex.Store({
                 subtitle: 'Presented by Fifth Third Bank',
                 logistics: '5:30 - 7:45 PM | South Dock',
                 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              }
+              },
+              4: {
+                title: 'Chicago Lake Front Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              5: {
+                title: 'Another Title Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
             }
           }
         }
