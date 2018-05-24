@@ -10,11 +10,11 @@
     <div class="screen-a">
       <component :is="this.activeScene.template"></component>
     </div>
-    <div class="screen-b">
+    <div class="screen-b"></div>
+    <div class="screen-c"></div>
+    <div class="screen-d">
       <component :is="this.activeScene.template4"></component>
     </div>
-    <div class="screen-c"></div>
-    <div class="screen-d"></div>
   </div>
 </template>
 
