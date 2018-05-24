@@ -3,6 +3,10 @@
     <div class="heading">
       <h1 v-html="activeList.headline"></h1>
     </div>
+    <div class="trailer-info">
+      <h2 v-if="activeList.logistics" v-html="activeList.logistics"></h2>
+      <p v-if="activeList.description">{{ activeList.description }}</p>
+    </div>
     <div class="events-wrap" id="events-wrap">
       <div class="events" id="events" v-bind:style="{ marginTop: topMargin }">
           <div v-for="item in activeList.events" v-bind:key="item.title" class="event">
@@ -156,7 +160,11 @@ export default {
     height: 100%;
     box-sizing: border-box;
   }
-
+  .trailer-info {
+    h2, p {
+      margin-bottom: 30px;
+    }
+  }
   .events-wrap {
     position: relative;
     flex-grow: 1;
@@ -281,6 +289,34 @@ export default {
     100% { opacity: 1; top: 0;}
   }
   @keyframes heading-out {
+    0%   { opacity: 1; top: 0; }
+    30%  { opacity: 1; top: 0; }
+    60% { opacity: 0; top: 20px; }
+    100% { opacity: 0; top: 20px; }
+  }
+
+  // Heading
+  .trailer-info {
+    position: relative;
+    opacity: 0;
+    top: 20px;
+  }
+  .animate_in .trailer-info {
+    opacity: 1;
+    top: 0;
+    animation: trailer-info-in 2s;
+  }
+  .animate_out .trailer-info {
+    animation: trailer-info-out 2s;
+  }
+
+  @keyframes trailer-info-in {
+    0%   { opacity: 0; top: 20px; }
+    30%  { opacity: 0; top: 20px; }
+    60% { opacity: 1; top: 0;}
+    100% { opacity: 1; top: 0;}
+  }
+  @keyframes trailer-info-out {
     0%   { opacity: 1; top: 0; }
     30%  { opacity: 1; top: 0; }
     60% { opacity: 0; top: 20px; }

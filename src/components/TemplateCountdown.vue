@@ -104,7 +104,6 @@ export default {
     refreshDate() {
       this.secondTimeout = setTimeout( () => {
         this.setTime();
-        console.log('refresh');
         this.refreshDate();
       }, 1000);
     }

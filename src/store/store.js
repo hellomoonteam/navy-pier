@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     current: {
-      scene: 2,
+      scene: 4,
     },
     scenes: {
       1: {
@@ -26,7 +26,6 @@ export const store = new Vuex.Store({
         template: 'TemplateList',
         template4: null,
         background: 'bg1.mp4',
-        myimage: 'event_list_reference.png',
         duration: '20',
         lists: {
           1: {
@@ -68,6 +67,53 @@ export const store = new Vuex.Store({
             }
           }
         }
+      },
+      4: {
+        name: 'trailer',
+        template: 'TemplateList',
+        template4: null,
+        background: 'bg4.mp4',
+        duration: '20',
+        lists: {
+          1: {
+            headline: 'WATER COLOR JAZZ SERIES',
+            duration: '20',
+            logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
+            description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
+            events: {
+              1: {
+                title: 'FOWARD MOMENTUM CHICAGO',
+                logistics: '5:30 PM',
+                description: 'Fountain at Polk Bros Park',
+              },
+              2: {
+                title: 'CHICAGO SAMBA',
+                logistics: '5:40 PM',
+                description: 'Leads the audience procession down to the South Dock',
+              },
+              3: {
+                title: 'MUNTU DANCE',
+                logistics: '5:55 PM',
+                description: 'Theater of Chicago on the East performance platform',
+              },
+              4: {
+                title: 'ANOTHER DANCE EVENT',
+                logistics: '6:00 PM',
+                description: 'Fountain at Polk Bros Park',
+              },
+              5: {
+                title: 'SHORT TITLE',
+                logistics: '6:40 PM',
+                description: 'Leads the audience procession down to the South Dock',
+              },
+              6: {
+                title: 'FINAL EVENT',
+                logistics: '6:55 PM',
+                description: 'Theater of Chicago on the East performance platform',
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -93,6 +139,24 @@ export const store = new Vuex.Store({
   mutations: {
     setScene: (state, payload) => {
       state.current.scene = payload;
+    },
+    FETCH_EVENTS(state, events) {
+      state.scenes[3].lists[1].events = events.events;
+      console.log('fetch data');
+      console.log(events.events);
+    }
+  },
+  actions: {
+    fetchEvents({ commit }, { self })  {
+      var endpoint = "https://navypier.org/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
+
+      Vue.axios.get(endpoint)
+      .then((response) => {
+        commit("FETCH_EVENTS", response.data);
+      })
+      .catch((error => {
+          console.log(error.statusText)
+      }))
     }
   }
 });

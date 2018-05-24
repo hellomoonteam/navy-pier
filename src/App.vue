@@ -46,6 +46,7 @@ export default {
   },
   created: function () {
     this.sceneLoad();
+    this.$store.dispatch('fetchEvents', { self: this });
   },
   methods: {
     sceneLoad() {
@@ -56,8 +57,10 @@ export default {
           sceneId = 1;
         }
         this.$store.commit('setScene', sceneId);
+        if (sceneId == 1) {
+          this.$store.dispatch('fetchEvents', { self: this });
+        }
         this.sceneLoad();
-        console.log('scene load');
       }, sceneDuration);
     },
   }
@@ -65,7 +68,7 @@ export default {
 </script>
 
 <style lang="scss">
-$gutter: 170px;
+$gutter: 160px;
 $screen: 640px;
 
 #app {
@@ -83,22 +86,22 @@ $screen: 640px;
 .screen-c,
 .screen-d {
   position: absolute;
-  top: 10px;
+  top: 0;
   z-index: 3;
   width: $screen;
   height: 1260px;
   border: 1px solid white;
 }
 .screen-a {
-  left: $gutter * .5;
+  left: 0;
 }
 .screen-b {
-  left: ($gutter * 1.5) + ($screen * 1);
+  left: ($gutter * 1) + ($screen * 1);
 }
 .screen-c {
-  left: ($gutter * 2.5) + ($screen * 2);
+  left: ($gutter * 2) + ($screen * 2);
 }
 .screen-d {
-  left: ($gutter * 3.5) + ($screen * 3);
+  left: ($gutter * 3) + ($screen * 3);
 }
 </style>
