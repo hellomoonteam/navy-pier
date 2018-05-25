@@ -53,7 +53,7 @@ export default {
     var wrapHeight = document.getElementById('events-wrap').offsetHeight;
     var contentHeight = 0;
 
-    // Calcular contentHeight and visibleEvents
+    // Calculate contentHeight and visibleEvents
     for (var i = 0; i < eventsTotal; i++) {
       var event = eventsEl.children[i];
       var eventHeight = event.offsetHeight;
@@ -62,7 +62,6 @@ export default {
         eventsVisible += 1;
       }
     }
-
 
     // How many events to cycle
     this.eventsToCycle = eventsTotal - eventsVisible;
@@ -127,7 +126,7 @@ export default {
     text-transform: uppercase;
   }
   h2 {
-    margin: 0;
+    margin: 0 0 20px 0;
     line-height: 30px;
     font-size: 30px;
     text-transform: uppercase;
@@ -138,7 +137,7 @@ export default {
     font-size: 17px;
   }
   h4 {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     line-height: 25px;
     font-size: 20px;
     font-weight: bold;
