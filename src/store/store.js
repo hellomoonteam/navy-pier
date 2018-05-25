@@ -6,33 +6,33 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     current: {
-      scene: 4,
+      scene: 1,
     },
     scenes: {
       1: {
         name: 'welcome1',
         template: 'video',
         template4: null,
-        background: 'welcome1.mp4',
+        background: 'welcome_1.mp4',
         duration: '60'
       },
       2: {
         name: 'branding1',
         template: 'video',
         template4: null,
-        background: 'branding1.mp4',
+        background: 'branding_1.mp4',
         duration: '30'
       },
       3: {
         name: 'program1',
         template: 'TemplateList',
         template4: null,
-        background: 'program1.mp4',
-        duration: '90',
+        background: 'program_1.mp4',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '20',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -40,41 +40,16 @@ export const store = new Vuex.Store({
                 logistics: '5:30 - 7:45 PM | South Dock',
                 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
                 logo: 'fifth_third_logo.png'
-              },
-              2: {
-                title: 'One of the Medium Titles Example',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              3: {
-                title: 'Short Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              4: {
-                title: 'Chicago Lake Front Festival',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
-                logo: 'fifth_third_logo.png'
-              },
-              5: {
-                title: 'Another Title Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
+              }
             }
           }
         }
       },
       4: {
         name: 'trailer1',
-        template: 'TemplateList',
+        template: 'TrailerList',
         template4: null,
-        background: 'trailer1.mp4',
+        background: 'trailer_1.mp4',
         duration: '45',
         lists: {
           1: {
@@ -85,7 +60,7 @@ export const store = new Vuex.Store({
             events: {
               1: {
                 title: 'Lowdown Brass Band',
-                logistics: 'Friday, July 6, 2018, from 6:30 pm - 8:30 pm',
+                logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
                 description: 'Lake Stage in Polk Bros Park',
               },
               2: {
@@ -95,37 +70,37 @@ export const store = new Vuex.Store({
               },
               3: {
                   title: 'Chicago Latin Jazz Festival',
-                  logistics: 'Sunday, July 15, 2018, from 3 pm - 6 pm',
+                  logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               4: {
                   title: 'Chicago Jazz Orchestra',
-                  logistics: 'Friday, July 20, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               5: {
                   title: 'Lettin’ the Good Times Float',
-                  logistics: 'Saturday, July 21, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               6: {
                   title: 'Victor Goines Quartet',
-                  logistics: 'Friday, August 3, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               7: {
                   title: 'Let Freedom Sing',
-                  logistics: 'Friday, August 10, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               8: {
                   title: 'Marquis Hill’s Blacktet',
-                  logistics: 'Friday, August 17, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
               9: {
                   title: 'Chicago Afrobeat Project',
-                  logistics: 'Friday, August 24, 2018, from 6:30 pm - 8:30 pm',
+                  logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
                   description: 'Lake Stage in Polk Bros Park'
               },
             }
@@ -136,26 +111,26 @@ export const store = new Vuex.Store({
         name: 'welcome2',
         template: 'video',
         template4: null,
-        background: 'welcome2.mp4',
+        background: 'welcome_2.mp4',
         duration: '60'
       },
       6: {
         name: 'branding2',
         template: 'video',
         template4: null,
-        background: 'branding2.mp4',
+        background: 'branding_2.mp4',
         duration: '30'
       },
       7: {
         name: 'program2',
         template: 'TemplateList',
         template4: null,
-        background: 'program2.mp4',
-        duration: '90',
+        background: 'program_2.mp4',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '20',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -163,41 +138,16 @@ export const store = new Vuex.Store({
                 logistics: '5:30 - 7:45 PM | South Dock',
                 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
                 logo: 'fifth_third_logo.png'
-              },
-              2: {
-                title: 'One of the Medium Titles Example',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              3: {
-                title: 'Short Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              4: {
-                title: 'Chicago Lake Front Festival',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
-                logo: 'fifth_third_logo.png'
-              },
-              5: {
-                title: 'Another Title Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
+              }
             }
           }
         }
       },
       8: {
         name: 'trailer2',
-        template: 'TemplateList',
+        template: 'TrailerList',
         template4: null,
-        background: 'trailer2.mp4',
+        background: 'trailer_2.mp4',
         duration: '45',
         lists: {
           1: {
@@ -212,20 +162,19 @@ export const store = new Vuex.Store({
                 logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
               },
               2: {
-                title: 'Miller Lite Beer Garden',
+                title: 'Miller Lite Beer Garden ',
                 logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
                 description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
               },
               3: {
                   title: 'Wave Wall Performance Platform',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
                   description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
               },
               4: {
                   title: 'Miller Lite Beer Garden',
-                  subtitle: 'Lake Stage In Polk Bros Park',
                   logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
               }
             }
           }
@@ -235,26 +184,26 @@ export const store = new Vuex.Store({
         name: 'welcome3',
         template: 'video',
         template4: null,
-        background: 'welcome3.mp4',
+        background: 'welcome_3.mp4',
         duration: '60'
       },
       10: {
         name: 'branding3',
         template: 'video',
         template4: null,
-        background: 'branding3.mp4',
+        background: 'branding_3.mp4',
         duration: '30'
       },
       11: {
         name: 'program3',
         template: 'TemplateList',
         template4: null,
-        background: 'program3.mp4',
-        duration: '90',
+        background: 'program_3.mp4',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '20',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -262,41 +211,16 @@ export const store = new Vuex.Store({
                 logistics: '5:30 - 7:45 PM | South Dock',
                 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
                 logo: 'fifth_third_logo.png'
-              },
-              2: {
-                title: 'One of the Medium Titles Example',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              3: {
-                title: 'Short Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              4: {
-                title: 'Chicago Lake Front Festival',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
-                logo: 'fifth_third_logo.png'
-              },
-              5: {
-                title: 'Another Title Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
+              }
             }
           }
         }
       },
       12: {
         name: 'trailer3',
-        template: 'TemplateList',
+        template: 'TrailerList',
         template4: null,
-        background: 'trailer3.mp4',
+        background: 'trailer_3.mp4',
         duration: '45',
         lists: {
           1: {
@@ -408,26 +332,26 @@ export const store = new Vuex.Store({
         name: 'welcome4',
         template: 'video',
         template4: null,
-        background: 'welcome4.mp4',
+        background: 'welcome_4.mp4',
         duration: '60'
       },
       14: {
         name: 'branding4',
         template: 'video',
         template4: null,
-        background: 'branding4.mp4',
+        background: 'branding_4.mp4',
         duration: '30'
       },
       15: {
         name: 'program4',
         template: 'TemplateList',
         template4: null,
-        background: 'program4.mp4',
-        duration: '90',
+        background: 'program_4.mp4',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '20',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -435,41 +359,16 @@ export const store = new Vuex.Store({
                 logistics: '5:30 - 7:45 PM | South Dock',
                 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
                 logo: 'fifth_third_logo.png'
-              },
-              2: {
-                title: 'One of the Medium Titles Example',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              3: {
-                title: 'Short Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
-              4: {
-                title: 'Chicago Lake Front Festival',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
-                logo: 'fifth_third_logo.png'
-              },
-              5: {
-                title: 'Another Title Title',
-                subtitle: 'Presented by Fifth Third Bank',
-                logistics: '5:30 - 7:45 PM | South Dock',
-                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
-              },
+              }
             }
           }
         }
       },
       16: {
         name: 'trailer4',
-        template: 'TemplateList',
+        template: 'TrailerList',
         template4: null,
-        background: 'trailer4.mp4',
+        background: 'trailer_4.mp4',
         duration: '45',
         lists: {
           1: {
@@ -495,9 +394,8 @@ export const store = new Vuex.Store({
               },
               4: {
                   title: 'Miller Lite Beer Garden',
-                  subtitle: 'Lake Stage In Polk Bros Park',
                   logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
               }
             }
           }
@@ -530,8 +428,9 @@ export const store = new Vuex.Store({
     },
     FETCH_EVENTS(state, events) {
       state.scenes[3].lists[1].events = events.events;
-      console.log('fetch data');
-      console.log(events.events);
+      state.scenes[7].lists[1].events = events.events;
+      state.scenes[11].lists[1].events = events.events;
+      state.scenes[15].lists[1].events = events.events;
     }
   },
   actions: {
