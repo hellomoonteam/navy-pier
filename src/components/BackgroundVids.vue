@@ -1,7 +1,7 @@
 <template>
   <div>
-    <video ref="player1" :src="player1Source" v-bind:class="{ active: player1Active == true, visible: player1Visible == true }" width="3249" height="1280" autoplay />
-    <video ref="player2" :src="player2Source" v-bind:class="{ active: player1Active == false, visible: player2Visible == true }"  width="3249" height="1280" autoplay />
+    <video ref="player1" :src="player1Source" v-bind:class="{ active: player1Active == true, visible: player1Visible == true }" width="3224" height="1274" autoplay />
+    <video ref="player2" :src="player2Source" v-bind:class="{ active: player1Active == false, visible: player2Visible == true }"  width="3224" height="1274" autoplay />
   </div>
 </template>
 
@@ -48,7 +48,6 @@ export default {
     preFade() {
       var duration = (this.activeScene.duration - 2) * 1000; // In Milliseconds
       setTimeout( () => {
-        console.log('prefade');
         this.player1Active = !this.player1Active;
 
         if (this.player1Active) {
@@ -99,7 +98,7 @@ video {
   opacity: 0;
 }
 .visible {
-  opacity: .99;
+  opacity: 1;
   transition: opacity 4s;
 }
 </style>
