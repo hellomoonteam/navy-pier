@@ -92,7 +92,7 @@ $screen: 640px;
   z-index: 3;
   width: $screen;
   height: 1260px;
-  border: 1px solid white;
+  // border: 1px solid white;
 }
 .screen-a {
   left: 0;
