@@ -46,7 +46,7 @@ export default {
     },
     activeList() {
       return this.activeScene.lists[this.activeListId];
-    }
+    },
   },
   created: function () {
     this.animateIn();

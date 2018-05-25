@@ -21,6 +21,7 @@
 <script>
 import BackgroundVids from './components/BackgroundVids.vue';
 import TemplateVideo from './components/TemplateVideo.vue';
+import TrailerList from './components/TrailerList.vue';
 import TemplateList from './components/TemplateList.vue';
 import TemplateCountdown from './components/TemplateCountdown.vue';
 import TemplateBlank from './components/TemplateBlank.vue';
@@ -41,6 +42,7 @@ export default {
     BackgroundVids,
     TemplateVideo,
     TemplateList,
+    TrailerList,
     TemplateCountdown,
     TemplateBlank
   },
