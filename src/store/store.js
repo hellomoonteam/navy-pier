@@ -10,23 +10,25 @@ export const store = new Vuex.Store({
     },
     scenes: {
       1: {
+        name: 'welcome1',
         template: 'video',
-        template4: 'TemplateCountdown',
-        background: 'bg2.mp4',
-        duration: '10'
+        template4: null,
+        background: 'welcome1.mp4',
+        duration: '60'
       },
       2: {
+        name: 'branding1',
         template: 'video',
         template4: null,
-        background: 'bg3.mp4',
-        duration: '7'
+        background: 'branding1.mp4',
+        duration: '30'
       },
       3: {
-        name: 'events',
+        name: 'program1',
         template: 'TemplateList',
         template4: null,
-        background: 'bg1.mp4',
-        duration: '20',
+        background: 'program1.mp4',
+        duration: '90',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
@@ -69,47 +71,433 @@ export const store = new Vuex.Store({
         }
       },
       4: {
-        name: 'trailer',
+        name: 'trailer1',
         template: 'TemplateList',
         template4: null,
-        background: 'bg4.mp4',
-        duration: '20',
+        background: 'trailer1.mp4',
+        duration: '45',
         lists: {
           1: {
             headline: 'WATER COLOR JAZZ SERIES',
-            duration: '20',
+            duration: '45',
             logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
             description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
             events: {
               1: {
-                title: 'FOWARD MOMENTUM CHICAGO',
-                logistics: '5:30 PM',
-                description: 'Fountain at Polk Bros Park',
+                title: 'Lowdown Brass Band',
+                logistics: 'Friday, July 6, 2018, from 6:30 pm - 8:30 pm',
+                description: 'Lake Stage in Polk Bros Park',
               },
               2: {
-                title: 'CHICAGO SAMBA',
+                title: 'NextGenJazz Emerging Artists Project',
                 logistics: '5:40 PM',
                 description: 'Leads the audience procession down to the South Dock',
               },
               3: {
-                title: 'MUNTU DANCE',
-                logistics: '5:55 PM',
-                description: 'Theater of Chicago on the East performance platform',
+                  title: 'Chicago Latin Jazz Festival',
+                  logistics: 'Sunday, July 15, 2018, from 3 pm - 6 pm',
+                  description: 'Lake Stage in Polk Bros Park'
               },
               4: {
-                title: 'ANOTHER DANCE EVENT',
-                logistics: '6:00 PM',
-                description: 'Fountain at Polk Bros Park',
+                  title: 'Chicago Jazz Orchestra',
+                  logistics: 'Friday, July 20, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
               },
               5: {
-                title: 'SHORT TITLE',
-                logistics: '6:40 PM',
-                description: 'Leads the audience procession down to the South Dock',
+                  title: 'Lettin’ the Good Times Float',
+                  logistics: 'Saturday, July 21, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
               },
               6: {
-                title: 'FINAL EVENT',
-                logistics: '6:55 PM',
-                description: 'Theater of Chicago on the East performance platform',
+                  title: 'Victor Goines Quartet',
+                  logistics: 'Friday, August 3, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
+              },
+              7: {
+                  title: 'Let Freedom Sing',
+                  logistics: 'Friday, August 10, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
+              },
+              8: {
+                  title: 'Marquis Hill’s Blacktet',
+                  logistics: 'Friday, August 17, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
+              },
+              9: {
+                  title: 'Chicago Afrobeat Project',
+                  logistics: 'Friday, August 24, 2018, from 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park'
+              },
+            }
+          }
+        }
+      },
+      5: {
+        name: 'welcome2',
+        template: 'video',
+        template4: null,
+        background: 'welcome2.mp4',
+        duration: '60'
+      },
+      6: {
+        name: 'branding2',
+        template: 'video',
+        template4: null,
+        background: 'branding2.mp4',
+        duration: '30'
+      },
+      7: {
+        name: 'program2',
+        template: 'TemplateList',
+        template4: null,
+        background: 'program2.mp4',
+        duration: '90',
+        lists: {
+          1: {
+            headline: 'TODAY AT <br> NAVY PIER',
+            duration: '20',
+            events: {
+              1: {
+                title: 'Chicago World Music Festival and World Dumpling Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              2: {
+                title: 'One of the Medium Titles Example',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              3: {
+                title: 'Short Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              4: {
+                title: 'Chicago Lake Front Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              5: {
+                title: 'Another Title Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+            }
+          }
+        }
+      },
+      8: {
+        name: 'trailer2',
+        template: 'TemplateList',
+        template4: null,
+        background: 'trailer2.mp4',
+        duration: '45',
+        lists: {
+          1: {
+            headline: 'LatiNxt presented by Sol',
+            duration: '45',
+            logistics: 'June 15-16, 2018',
+            description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
+            sponsor: 'Presented by Sol',
+            events: {
+              1: {
+                title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
+                logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
+              },
+              2: {
+                title: 'Miller Lite Beer Garden',
+                logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
+                description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
+              },
+              3: {
+                  title: 'Wave Wall Performance Platform',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
+                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
+              },
+              4: {
+                  title: 'Miller Lite Beer Garden',
+                  subtitle: 'Lake Stage In Polk Bros Park',
+                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
+              }
+            }
+          }
+        }
+      },
+      9: {
+        name: 'welcome3',
+        template: 'video',
+        template4: null,
+        background: 'welcome3.mp4',
+        duration: '60'
+      },
+      10: {
+        name: 'branding3',
+        template: 'video',
+        template4: null,
+        background: 'branding3.mp4',
+        duration: '30'
+      },
+      11: {
+        name: 'program3',
+        template: 'TemplateList',
+        template4: null,
+        background: 'program3.mp4',
+        duration: '90',
+        lists: {
+          1: {
+            headline: 'TODAY AT <br> NAVY PIER',
+            duration: '20',
+            events: {
+              1: {
+                title: 'Chicago World Music Festival and World Dumpling Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              2: {
+                title: 'One of the Medium Titles Example',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              3: {
+                title: 'Short Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              4: {
+                title: 'Chicago Lake Front Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              5: {
+                title: 'Another Title Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+            }
+          }
+        }
+      },
+      12: {
+        name: 'trailer3',
+        template: 'TemplateList',
+        template4: null,
+        background: 'trailer3.mp4',
+        duration: '45',
+        lists: {
+          1: {
+            headline: 'Wiggleworms',
+            duration: '45',
+            logistics: 'June 15-16, 2018',
+            description: 'Old Town School of Folk Music’s celebrated early childhood music program welcomes kids and families to a musical world!',
+            events: {
+              1: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, June 20, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              2: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, June 22, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              3: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, June 27, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              4: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, June 29, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              5: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, July 6, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              6: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, July 11, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              7: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, July 13, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              8: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, July 18, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              9: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, July 20, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              10: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, July 25, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              11: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, July 27, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              12: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 1, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              13: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 3, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              14: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 8, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              15: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 10, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              16: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 15, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              17: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 17, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              18: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 22, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              19: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 24, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              }
+            }
+          }
+        }
+      },
+      13: {
+        name: 'welcome4',
+        template: 'video',
+        template4: null,
+        background: 'welcome4.mp4',
+        duration: '60'
+      },
+      14: {
+        name: 'branding4',
+        template: 'video',
+        template4: null,
+        background: 'branding4.mp4',
+        duration: '30'
+      },
+      15: {
+        name: 'program4',
+        template: 'TemplateList',
+        template4: null,
+        background: 'program4.mp4',
+        duration: '90',
+        lists: {
+          1: {
+            headline: 'TODAY AT <br> NAVY PIER',
+            duration: '20',
+            events: {
+              1: {
+                title: 'Chicago World Music Festival and World Dumpling Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              2: {
+                title: 'One of the Medium Titles Example',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              3: {
+                title: 'Short Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+              4: {
+                title: 'Chicago Lake Front Festival',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.',
+                logo: 'fifth_third_logo.png'
+              },
+              5: {
+                title: 'Another Title Title',
+                subtitle: 'Presented by Fifth Third Bank',
+                logistics: '5:30 - 7:45 PM | South Dock',
+                description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenan massa.'
+              },
+            }
+          }
+        }
+      },
+      16: {
+        name: 'trailer4',
+        template: 'TemplateList',
+        template4: null,
+        background: 'trailer4.mp4',
+        duration: '45',
+        lists: {
+          1: {
+            headline: 'LatiNxt presented by Sol',
+            duration: '45',
+            logistics: 'June 15-16, 2018',
+            description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
+            sponsor: 'Presented by Sol',
+            events: {
+              1: {
+                title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
+                logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
+              },
+              2: {
+                title: 'Miller Lite Beer Garden',
+                logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
+                description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
+              },
+              3: {
+                  title: 'Wave Wall Performance Platform',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
+                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
+              },
+              4: {
+                  title: 'Miller Lite Beer Garden',
+                  subtitle: 'Lake Stage In Polk Bros Park',
+                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
               }
             }
           }
