@@ -33,13 +33,10 @@ export default {
     return {
       animateInClass: false,
       animateOutClass: false,
-      hours: '',
       hoursFirst: '',
       hoursLast: '',
-      minutes: '',
       minutesFirst: '',
       minutesLast: '',
-      seconds: '',
       secondsFirst: '',
       secondsLast: '',
       secondTimeout: null
@@ -75,30 +72,47 @@ export default {
     },
     setTime() {
       var date = new Date();
-      this.hours = date.getHours();
-      this.minutes = date.getMinutes();
-      this.seconds = date.getSeconds();
+      var currentHours = date.getHours();
+      var currentMinutes = date.getMinutes();
+      var currentSeconds = date.getSeconds();
+      var startHours = this.activeScene.startHours;
+      var startMinutes = this.activeScene.startMinutes;
+      var startSeconds = 0;
 
-      if (this.minutes < 10) {
+      // Figure out time difference
+      var hours = startHours - currentHours;
+      var minutes = startMinutes - currentMinutes;
+      var seconds = startSeconds - currentSeconds;
+      if (seconds < 0) {
+        seconds = seconds + 60;
+        minutes = minutes - 1;
+      }
+      if (minutes < 0) {
+        minutes = minutes + 60;
+        hours = hours - 1;
+      }
+
+      // Format Result with leading zero and split into two digits
+      if (minutes < 10) {
         this.minutesFirst = 0;
-        this.minutesLast = this.minutes;
+        this.minutesLast = minutes;
       } else {
-        this.minutesFirst = this.minutes.toString().charAt(0);
-        this.minutesLast = this.minutes.toString().charAt(1);
+        this.minutesFirst = minutes.toString().charAt(0);
+        this.minutesLast = minutes.toString().charAt(1);
       }
-      if (this.hours < 10) {
+      if (hours < 10) {
         this.hoursFirst = 0;
-        this.hoursLast = this.hours;
+        this.hoursLast = hours;
       } else {
-        this.hoursFirst = this.hours.toString().charAt(0);
-        this.hoursLast = this.hours.toString().charAt(1);
+        this.hoursFirst =  hours.toString().charAt(0);
+        this.hoursLast = hours.toString().charAt(1);
       }
-      if (this.seconds < 10) {
+      if (seconds < 10) {
         this.secondsFirst = 0;
-        this.secondsLast = this.seconds;
+        this.secondsLast = seconds;
       } else {
-        this.secondsFirst = this.seconds.toString().charAt(0);
-        this.secondsLast = this.seconds.toString().charAt(1);
+        this.secondsFirst = seconds.toString().charAt(0);
+        this.secondsLast = seconds.toString().charAt(1);
       }
     },
     refreshDate() {

@@ -108,20 +108,29 @@ export const store = new Vuex.Store({
         }
       },
       5: {
+        name: 'countdown1',
+        template: 'TemplateBlank',
+        template4: 'TemplateCountdown',
+        background: 'countdown.mp4',
+        duration: '30',
+        startHours: '21',
+        startMinutes: '30',
+      },
+      6: {
         name: 'welcome2',
         template: 'video',
         template4: null,
         background: 'welcome_2.mp4',
         duration: '60'
       },
-      6: {
+      7: {
         name: 'branding2',
         template: 'video',
         template4: null,
         background: 'branding_2.mp4',
         duration: '30'
       },
-      7: {
+      8: {
         name: 'program2',
         template: 'TemplateList',
         template4: null,
@@ -143,7 +152,7 @@ export const store = new Vuex.Store({
           }
         }
       },
-      8: {
+      9: {
         name: 'trailer2',
         template: 'TrailerList',
         template4: null,
@@ -180,21 +189,30 @@ export const store = new Vuex.Store({
           }
         }
       },
-      9: {
+      10: {
+        name: 'countdown2',
+        template: 'TemplateBlank',
+        template4: 'TemplateCountdown',
+        background: 'countdown.mp4',
+        duration: '30',
+        startHours: '21',
+        startMinutes: '30',
+      },
+      11: {
         name: 'welcome3',
         template: 'video',
         template4: null,
         background: 'welcome_3.mp4',
         duration: '60'
       },
-      10: {
+      12: {
         name: 'branding3',
         template: 'video',
         template4: null,
         background: 'branding_3.mp4',
         duration: '30'
       },
-      11: {
+      13: {
         name: 'program3',
         template: 'TemplateList',
         template4: null,
@@ -216,7 +234,7 @@ export const store = new Vuex.Store({
           }
         }
       },
-      12: {
+      14: {
         name: 'trailer3',
         template: 'TrailerList',
         template4: null,
@@ -328,21 +346,30 @@ export const store = new Vuex.Store({
           }
         }
       },
-      13: {
+      15: {
+        name: 'countdown3',
+        template: 'TemplateBlank',
+        template4: 'TemplateCountdown',
+        background: 'countdown.mp4',
+        duration: '30',
+        startHours: '21',
+        startMinutes: '30',
+      },
+      16: {
         name: 'welcome4',
         template: 'video',
         template4: null,
         background: 'welcome_4.mp4',
         duration: '60'
       },
-      14: {
+      17: {
         name: 'branding4',
         template: 'video',
         template4: null,
         background: 'branding_4.mp4',
         duration: '30'
       },
-      15: {
+      18: {
         name: 'program4',
         template: 'TemplateList',
         template4: null,
@@ -364,7 +391,7 @@ export const store = new Vuex.Store({
           }
         }
       },
-      16: {
+      19: {
         name: 'trailer4',
         template: 'TrailerList',
         template4: null,
@@ -400,6 +427,15 @@ export const store = new Vuex.Store({
             }
           }
         }
+      },
+      20: {
+        name: 'countdown1',
+        template: 'TemplateBlank',
+        template4: 'TemplateCountdown',
+        background: 'countdown.mp4',
+        duration: '30',
+        startHours: '21',
+        startMinutes: '30',
       }
     }
   },
@@ -428,9 +464,9 @@ export const store = new Vuex.Store({
     },
     FETCH_EVENTS(state, events) {
       state.scenes[3].lists[1].events = events.events;
-      state.scenes[7].lists[1].events = events.events;
-      state.scenes[11].lists[1].events = events.events;
-      state.scenes[15].lists[1].events = events.events;
+      state.scenes[8].lists[1].events = events.events;
+      state.scenes[13].lists[1].events = events.events;
+      state.scenes[18].lists[1].events = events.events;
     }
   },
   actions: {
@@ -439,10 +475,12 @@ export const store = new Vuex.Store({
 
       Vue.axios.get(endpoint)
       .then((response) => {
+        console.log('events fetched');
         commit("FETCH_EVENTS", response.data);
       })
       .catch((error => {
-          console.log(error.statusText)
+          console.log('event fetch failed');
+          console.log(error.statusText);
       }))
     }
   }
