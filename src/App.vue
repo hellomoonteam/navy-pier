@@ -52,6 +52,7 @@ export default {
   },
   methods: {
     sceneLoad() {
+      console.log('Scene Load');
       var sceneDuration = this.activeScene.duration * 1000; // In Milliseconds
       setTimeout( () => {
         var sceneId = this.currentScene + 1;
@@ -70,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
-$gutter: 160px;
+$gutter: 200px;
 $screen: 640px;
 
 #app {
@@ -91,7 +92,7 @@ $screen: 640px;
   top: 0;
   z-index: 3;
   width: $screen;
-  height: 1260px;
+  height: 1262px;
   // border: 1px solid white;
 }
 .screen-a {
