@@ -10,8 +10,12 @@
     <div class="screen-a">
       <component :is="this.activeScene.template"></component>
     </div>
-    <div class="screen-b"></div>
-    <div class="screen-c"></div>
+    <div class="screen-b">
+      <component :is="this.activeScene.template2"></component>
+    </div>
+    <div class="screen-c">
+      <component :is="this.activeScene.template3"></component>
+    </div>
     <div class="screen-d">
       <component :is="this.activeScene.template4"></component>
     </div>
@@ -25,6 +29,8 @@ import TrailerList from './components/TrailerList.vue';
 import TemplateList from './components/TemplateList.vue';
 import TemplateCountdown from './components/TemplateCountdown.vue';
 import TemplateBlank from './components/TemplateBlank.vue';
+import TemplateFireworksTitleLeft from './components/TemplateFireworksTitleLeft.vue';
+import TemplateFireworksTitleRight from './components/TemplateFireworksTitleRight.vue';
 
 export default {
   computed: {
@@ -36,6 +42,9 @@ export default {
     },
     activeScene() {
       return this.$store.getters.activeScene;
+    },
+    nextScene() {
+      return this.$store.getters.nextScene;
     }
   },
   components: {
@@ -44,7 +53,9 @@ export default {
     TemplateList,
     TrailerList,
     TemplateCountdown,
-    TemplateBlank
+    TemplateBlank,
+    TemplateFireworksTitleLeft,
+    TemplateFireworksTitleRight
   },
   created: function () {
     this.sceneLoad();
@@ -52,20 +63,57 @@ export default {
   },
   methods: {
     sceneLoad() {
-      console.log('Scene Load');
-      var sceneDuration = this.activeScene.duration * 1000; // In Milliseconds
       setTimeout( () => {
-        var sceneId = this.currentScene + 1;
+        var sceneId = this.currentScene;
+        if (this.nextScene.name == 'countdown' && this.countdownTimePassed()) {
+          console.log('next scene is countdown with time passed');
+          sceneId += 2;
+        } else {
+          sceneId += 1;
+        }
         if (sceneId > this.sceneCount) {
           sceneId = 1;
         }
+
+        console.log('commit scene id: ', sceneId);
         this.$store.commit('setScene', sceneId);
+
+
         if (sceneId == 1) {
           this.$store.dispatch('fetchEvents', { self: this });
         }
         this.sceneLoad();
-      }, sceneDuration);
+      }, this.activeScene.duration * 1000);
     },
+    countdownTimePassed() {
+      var date = new Date();
+      var currentHours = date.getHours();
+      var currentMinutes = date.getMinutes();
+      var currentSeconds = date.getSeconds();
+      var startHours = this.nextScene.startHours;
+      var startMinutes = this.nextScene.startMinutes;
+      var startSeconds = 0;
+
+      // Figure out time difference
+      var hours = startHours - currentHours;
+      var minutes = startMinutes - currentMinutes;
+      var seconds = startSeconds - currentSeconds;
+
+      // Handle negative seconds and minutes
+      if (seconds < 0) {
+        seconds = seconds + 60;
+        minutes = minutes - 1;
+      }
+      if (minutes < 0) {
+        minutes = minutes + 60;
+        hours = hours - 1;
+      }
+      if (hours < 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 }
 </script>

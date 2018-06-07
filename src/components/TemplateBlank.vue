@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-      <h1>Nada</h1>
+      <h1></h1>
   </div>
 </template>
 

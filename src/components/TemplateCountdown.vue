@@ -83,6 +83,8 @@ export default {
       var hours = startHours - currentHours;
       var minutes = startMinutes - currentMinutes;
       var seconds = startSeconds - currentSeconds;
+
+      // Handle negative seconds and minutes
       if (seconds < 0) {
         seconds = seconds + 60;
         minutes = minutes - 1;
@@ -90,6 +92,13 @@ export default {
       if (minutes < 0) {
         minutes = minutes + 60;
         hours = hours - 1;
+      }
+
+      // Start time has passed
+      if (hours < 0) {
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
       }
 
       // Format Result with leading zero and split into two digits
@@ -147,9 +156,9 @@ export default {
   h2 {
     display: block;
     margin-bottom: 10px;
-    line-height: 70px;
-    height: 70px;
-    font-size: 70px;
+    line-height: 65px;
+    height: 65px;
+    font-size: 65px;
     box-sizing: border-box;
   }
   h3 {

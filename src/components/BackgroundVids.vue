@@ -36,7 +36,7 @@ export default {
       return this.$store.getters.activeScene;
     },
     nextScene() {
-      return this.$store.getters.nextScene;
+      return this.$store.getters.nextSceneAlt;
     }
   },
   created: function() {

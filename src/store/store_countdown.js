@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     current: {
-      scene: 4,
+      scene: 2,
     },
     scenes: {
       1: {
@@ -14,25 +14,25 @@ export const store = new Vuex.Store({
         template: 'video',
         template4: null,
         background: 'welcome_1.mp4',
-        duration: '61'
+        duration: '60'
       },
       2: {
         name: 'branding1',
         template: 'video',
         template4: null,
         background: 'branding_1.mp4',
-        duration: '33'
+        duration: '30'
       },
       3: {
         name: 'program1',
         template: 'TemplateList',
         template4: null,
         background: 'program_1.mp4',
-        duration: '91',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '91',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -50,11 +50,11 @@ export const store = new Vuex.Store({
         template: 'TrailerList',
         template4: null,
         background: 'trailer_1.mp4',
-        duration: '48',
+        duration: '45',
         lists: {
           1: {
             headline: 'WATER COLOR JAZZ SERIES',
-            duration: '48',
+            duration: '45',
             logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
             description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
             events: {
@@ -110,8 +110,6 @@ export const store = new Vuex.Store({
       5: {
         name: 'countdown',
         template: 'TemplateBlank',
-        template2: 'TemplateFireworksTitleLeft',
-        template3: 'TemplateFireworksTitleRight',
         template4: 'TemplateCountdown',
         background: 'countdown.mp4',
         duration: '30',
@@ -123,25 +121,25 @@ export const store = new Vuex.Store({
         template: 'video',
         template4: null,
         background: 'welcome_2.mp4',
-        duration: '61'
+        duration: '60'
       },
       7: {
         name: 'branding2',
         template: 'video',
         template4: null,
         background: 'branding_2.mp4',
-        duration: '33'
+        duration: '30'
       },
       8: {
         name: 'program2',
         template: 'TemplateList',
         template4: null,
         background: 'program_2.mp4',
-        duration: '91',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '91',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -159,11 +157,11 @@ export const store = new Vuex.Store({
         template: 'TrailerList',
         template4: null,
         background: 'trailer_2.mp4',
-        duration: '48',
+        duration: '45',
         lists: {
           1: {
             headline: 'LatiNxt presented by Sol',
-            duration: '48',
+            duration: '45',
             logistics: 'June 15-16, 2018',
             description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
             sponsor: 'Presented by Sol',
@@ -192,10 +190,8 @@ export const store = new Vuex.Store({
         }
       },
       10: {
-        name: 'countdown',
+        name: 'countdown2',
         template: 'TemplateBlank',
-        template2: 'TemplateFireworksTitleLeft',
-        template3: 'TemplateFireworksTitleRight',
         template4: 'TemplateCountdown',
         background: 'countdown.mp4',
         duration: '30',
@@ -207,25 +203,25 @@ export const store = new Vuex.Store({
         template: 'video',
         template4: null,
         background: 'welcome_3.mp4',
-        duration: '61'
+        duration: '60'
       },
       12: {
         name: 'branding3',
         template: 'video',
         template4: null,
         background: 'branding_3.mp4',
-        duration: '33'
+        duration: '30'
       },
       13: {
         name: 'program3',
         template: 'TemplateList',
         template4: null,
         background: 'program_3.mp4',
-        duration: '91',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '91',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -243,67 +239,107 @@ export const store = new Vuex.Store({
         template: 'TrailerList',
         template4: null,
         background: 'trailer_3.mp4',
-        duration: '48',
+        duration: '45',
         lists: {
           1: {
             headline: 'Wiggleworms',
-            duration: '48',
+            duration: '45',
             logistics: 'June 15-16, 2018',
             description: 'Old Town School of Folk Music’s celebrated early childhood music program welcomes kids and families to a musical world!',
             events: {
               1: {
                 title: 'Wiggleworms',
-                logistics: 'Wednesday, June 20, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Wednesday, June 20, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               2: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, June 22, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, June 22, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               3: {
                 title: 'Wiggleworms',
-                logistics: 'Wednesday, June 27, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Wednesday, June 27, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               4: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, June 29, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, June 29, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               5: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, July 6, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, July 6, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               6: {
                 title: 'Wiggleworms',
-                logistics: 'Wednesday, July 11, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Wednesday, July 11, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               7: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, July 13, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, July 13, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               8: {
                 title: 'Wiggleworms',
-                logistics: 'Wednesday, July 18, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Wednesday, July 18, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               9: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, July 20, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, July 20, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               10: {
                 title: 'Wiggleworms',
-                logistics: 'Wednesday, July 25, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Wednesday, July 25, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               },
               11: {
                 title: 'Wiggleworms',
-                logistics: 'Friday, July 27, 2018 | 10:00 am - 11:45 am',
+                logistics: 'Friday, July 27, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              12: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 1, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              13: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 3, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              14: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 8, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              15: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 10, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              16: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 15, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              17: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 17, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              18: {
+                title: 'Wiggleworms',
+                logistics: 'Wednesday, August 22, 2018 | 10:00 am - 11:45 pm',
+                description: 'City Stage In Polk Bros Park'
+              },
+              19: {
+                title: 'Wiggleworms',
+                logistics: 'Friday, August 24, 2018 | 10:00 am - 11:45 pm',
                 description: 'City Stage In Polk Bros Park'
               }
             }
@@ -311,10 +347,8 @@ export const store = new Vuex.Store({
         }
       },
       15: {
-        name: 'countdown',
+        name: 'countdown3',
         template: 'TemplateBlank',
-        template2: 'TemplateFireworksTitleLeft',
-        template3: 'TemplateFireworksTitleRight',
         template4: 'TemplateCountdown',
         background: 'countdown.mp4',
         duration: '30',
@@ -326,25 +360,25 @@ export const store = new Vuex.Store({
         template: 'video',
         template4: null,
         background: 'welcome_4.mp4',
-        duration: '61'
+        duration: '60'
       },
       17: {
         name: 'branding4',
         template: 'video',
         template4: null,
         background: 'branding_4.mp4',
-        duration: '33'
+        duration: '30'
       },
       18: {
         name: 'program4',
         template: 'TemplateList',
         template4: null,
         background: 'program_4.mp4',
-        duration: '91',
+        duration: '30',
         lists: {
           1: {
             headline: 'TODAY AT <br> NAVY PIER',
-            duration: '91',
+            duration: '30',
             events: {
               1: {
                 title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -362,11 +396,11 @@ export const store = new Vuex.Store({
         template: 'TrailerList',
         template4: null,
         background: 'trailer_4.mp4',
-        duration: '48',
+        duration: '45',
         lists: {
           1: {
             headline: 'LatiNxt presented by Sol',
-            duration: '48',
+            duration: '45',
             logistics: 'June 15-16, 2018',
             description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
             sponsor: 'Presented by Sol',
@@ -395,10 +429,8 @@ export const store = new Vuex.Store({
         }
       },
       20: {
-        name: 'countdown',
+        name: 'countdown1',
         template: 'TemplateBlank',
-        template2: 'TemplateFireworksTitleLeft',
-        template3: 'TemplateFireworksTitleRight',
         template4: 'TemplateCountdown',
         background: 'countdown.mp4',
         duration: '30',
@@ -424,36 +456,6 @@ export const store = new Vuex.Store({
         nextScene = 1;
       }
       return state.scenes[nextScene];
-    },
-    nextSceneAlt: state => {
-      var sceneCount = Object.keys(state.scenes).length;
-      var nextSceneId = state.current.scene + 1;
-
-      if (nextSceneId > sceneCount) {
-        nextSceneId = 1;
-      }
-      if (state.scenes[nextSceneId].name == 'countdown') {
-        var currentDate = new Date();
-
-        // Figure out time difference
-        var hours = state.scenes[nextSceneId].startHours - currentDate.getHours();;
-        var minutes = state.scenes[nextSceneId].startMinutes - currentDate.getMinutes();
-        var seconds = 0 - currentDate.getSeconds();
-
-        // Handle negative seconds and minutes
-        if (seconds < 0) {
-          seconds += 60;
-          minutes -= 1;
-        }
-        if (minutes < 0) {
-          minutes += 60;
-          hours -= 1;
-        }
-        if (hours < 0) {
-          nextSceneId += 1;
-        }
-      }
-      return state.scenes[nextSceneId];
     }
   },
   mutations: {
@@ -462,9 +464,9 @@ export const store = new Vuex.Store({
     },
     FETCH_EVENTS(state, events) {
       state.scenes[3].lists[1].events = events.events;
-      state.scenes[7].lists[1].events = events.events;
-      state.scenes[11].lists[1].events = events.events;
-      state.scenes[15].lists[1].events = events.events;
+      state.scenes[8].lists[1].events = events.events;
+      state.scenes[13].lists[1].events = events.events;
+      state.scenes[18].lists[1].events = events.events;
     }
   },
   actions: {
