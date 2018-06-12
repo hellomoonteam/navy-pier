@@ -15,10 +15,10 @@
              v-bind:class="{ offscreen: index <= eventsOffscreen }"
             class="event"
           >
-            <h2>{{ item.title }}</h2>
-            <h3 v-if="item.subtitle">{{ item.subtitle }}</h3>
-            <h4 v-if="item.logistics">{{ item.logistics }}</h4>
-            <p v-if="item.description">{{ item.description }}</p>
+            <h2 v-html="item.title"></h2>
+            <h3 v-if="item.subtitle" v-html="item.subtitle"></h3>
+            <h4 v-if="item.logistics" v-html="item.logistics"></h4>
+            <p v-if="item.description" v-html="item.description"></p>
             <img v-if="item.logo" :src="'/static/' + item.logo" />
           </div>
       </div>
