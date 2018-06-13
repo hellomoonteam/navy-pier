@@ -37,6 +37,9 @@ export default {
     currentScene() {
       return this.$store.getters.currentScene;
     },
+    currentDay() {
+      return this.$store.getters.currentDay;
+    },
     sceneCount() {
       return this.$store.getters.sceneCount;
     },
@@ -66,15 +69,21 @@ export default {
       setTimeout( () => {
         var currentDate = new Date();
         var sceneId = this.currentScene;
+        var day = this.currentDay;
+        var newDay = 'defaultday';
 
-        // Next scene is the countdown and it's wednesday or saturday
-        if (this.nextScene.name == 'countdown' && (currentDate.getDay() == 3 || currentDate.getDay() == 6) ) {
+        // CHECK DAY
+        if (currentDate.getDay() == 3) {
+          newDay = ('wednesday');
+        } else if (currentDate.getDay() == 6) {
+          newDay = ('saturday');
+        }
+        if (day != newDay) {
+          this.$store.commit('setDay', newDay);
+        }
 
-          console.log('countdown on wed');
-          // SET COUNTDOWN TIME
-          this.$store.commit('setCountdownHours', '12');
-          this.$store.commit('setCountdownMinutes', '59');
-
+        // COUNTDOWN CHECK
+        if (this.nextScene.name == 'countdown') {
           if (this.countdownTimePassed()) {
             console.log('countdown time passed');
             sceneId += 2;
@@ -82,13 +91,7 @@ export default {
             console.log('countdown time NOT passed');
             sceneId += 1;
           }
-
-        // Next scene is the countdown but it's not the right day
-        } else if (this.nextScene.name == 'countdown' ) {
-          sceneId += 2;
-
-        // Next scene is not a countdown
-        } else if (this.nextScene.name != 'countdown' ) {
+        } else {
           sceneId += 1;
         }
 
@@ -105,7 +108,7 @@ export default {
 
         // FETCH EVENTS
         // Get events from API if it's the first scene
-        if (sceneId == 1) {
+        if (sceneId == 3) {
           this.$store.dispatch('fetchEvents', { self: this });
         }
 
