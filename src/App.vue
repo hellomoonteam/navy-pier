@@ -64,24 +64,53 @@ export default {
   methods: {
     sceneLoad() {
       setTimeout( () => {
+        var currentDate = new Date();
         var sceneId = this.currentScene;
-        if (this.nextScene.name == 'countdown' && this.countdownTimePassed()) {
-          console.log('next scene is countdown with time passed');
+
+        // Next scene is the countdown and it's wednesday or saturday
+        if (this.nextScene.name == 'countdown' && (currentDate.getDay() == 3 || currentDate.getDay() == 6) ) {
+
+          console.log('countdown on wed');
+          // SET COUNTDOWN TIME
+          this.$store.commit('setCountdownHours', '12');
+          this.$store.commit('setCountdownMinutes', '59');
+
+          if (this.countdownTimePassed()) {
+            console.log('countdown time passed');
+            sceneId += 2;
+          } else {
+            console.log('countdown time NOT passed');
+            sceneId += 1;
+          }
+
+        // Next scene is the countdown but it's not the right day
+        } else if (this.nextScene.name == 'countdown' ) {
           sceneId += 2;
-        } else {
+
+        // Next scene is not a countdown
+        } else if (this.nextScene.name != 'countdown' ) {
           sceneId += 1;
         }
+
+        // LOOP CHECK
+        // Check to see if we've exceeded the number of scenes, If so
+        // remove the number of scenes from sceneId to go back. This
+        // takes into account sceneId's incremented by more than one.
         if (sceneId > this.sceneCount) {
-          sceneId = 1;
+          sceneId = sceneId - this.sceneCount;
         }
 
-        console.log('commit scene id: ', sceneId);
+        // COMMIT SCENE ID
         this.$store.commit('setScene', sceneId);
 
-
+        // FETCH EVENTS
+        // Get events from API if it's the first scene
         if (sceneId == 1) {
           this.$store.dispatch('fetchEvents', { self: this });
         }
+
+        // LOAD SCENE
+        // Setup next scene load
         this.sceneLoad();
       }, this.activeScene.duration * 1000);
     },

@@ -50,11 +50,11 @@ export const store = new Vuex.Store({
         template: 'TrailerList',
         template4: null,
         background: 'trailer_1.mp4',
-        duration: '48',
+        duration: '8',
         lists: {
           1: {
             headline: 'WATER COLOR JAZZ SERIES',
-            duration: '48',
+            duration: '8',
             logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
             description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
             events: {
@@ -429,14 +429,15 @@ export const store = new Vuex.Store({
       var sceneCount = Object.keys(state.scenes).length;
       var nextSceneId = state.current.scene + 1;
 
-      if (nextSceneId > sceneCount) {
-        nextSceneId = 1;
-      }
       if (state.scenes[nextSceneId].name == 'countdown') {
         var currentDate = new Date();
 
+        // SET COUNTDOWN TIME
+        this.$store.commit('setCountdownHours', '12');
+        this.$store.commit('setCountdownMinutes', '59');
+
         // Figure out time difference
-        var hours = state.scenes[nextSceneId].startHours - currentDate.getHours();;
+        var hours = state.scenes[nextSceneId].startHours - currentDate.getHours();
         var minutes = state.scenes[nextSceneId].startMinutes - currentDate.getMinutes();
         var seconds = 0 - currentDate.getSeconds();
 
@@ -449,10 +450,18 @@ export const store = new Vuex.Store({
           minutes += 60;
           hours -= 1;
         }
-        if (hours < 0) {
+
+        // If countdown time has passed or it's not the right day
+        if (hours < 0 || currentDate.getDay() != 3 || currentDate.getDay() != 6) {
           nextSceneId += 1;
         }
       }
+
+      // Loop Scene ID
+      if (nextSceneId > sceneCount) {
+        nextSceneId = nextSceneId - sceneCount;
+      }
+
       return state.scenes[nextSceneId];
     }
   },
@@ -460,11 +469,25 @@ export const store = new Vuex.Store({
     setScene: (state, payload) => {
       state.current.scene = payload;
     },
+    setCountdownHours: (state, payload) => {
+      console.log('set hours');
+      state.scenes[5].startHours = payload;
+      state.scenes[10].startHours = payload;
+      state.scenes[15].startHours = payload;
+      state.scenes[20].startHours = payload;
+    },
+    setCountdownMinutes: (state, payload) => {
+      console.log('set minutes');
+      state.scenes[5].startMinutes = payload;
+      state.scenes[10].startMinutes = payload;
+      state.scenes[15].startMinutes = payload;
+      state.scenes[20].startMinutes = payload;
+    },
     FETCH_EVENTS(state, events) {
       state.scenes[3].lists[1].events = events.events;
-      state.scenes[7].lists[1].events = events.events;
-      state.scenes[11].lists[1].events = events.events;
-      state.scenes[15].lists[1].events = events.events;
+      state.scenes[8].lists[1].events = events.events;
+      state.scenes[13].lists[1].events = events.events;
+      state.scenes[18].lists[1].events = events.events;
     }
   },
   actions: {
