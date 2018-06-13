@@ -456,10 +456,12 @@ export const store = new Vuex.Store({
           template: 'TrailerList',
           template4: null,
           background: 'trailer_1.mp4',
+          // duration: '48',
           duration: '8',
           lists: {
             1: {
               headline: 'WATER COLOR JAZZ SERIES',
+              // duration: '48',
               duration: '8',
               logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
               description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
@@ -856,11 +858,11 @@ export const store = new Vuex.Store({
           template: 'TrailerList',
           template4: null,
           background: 'trailer_1.mp4',
-          duration: '8',
+          duration: '48',
           lists: {
             1: {
               headline: 'WATER COLOR JAZZ SERIES',
-              duration: '8',
+              duration: '48',
               logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
               description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
               events: {
