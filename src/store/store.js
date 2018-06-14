@@ -7,7 +7,7 @@ export const store = new Vuex.Store({
   state: {
     current: {
       scene: 1,
-      day: 'wednesday'
+      day: 'defaultday'
     },
     defaultday: {
       scenes: {
@@ -118,7 +118,7 @@ export const store = new Vuex.Store({
           background: 'countdown.mp4',
           duration: '30',
           startHours: '00',
-          startMinutes: '01',
+          startMinutes: '00',
         },
         6: {
           name: 'welcome2',
@@ -171,23 +171,24 @@ export const store = new Vuex.Store({
               sponsor: 'Presented by Sol',
               events: {
                 1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
+                  title: 'Miller Lite Beer Garden ',
                   logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
+                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
                 },
                 2: {
-                  title: 'Miller Lite Beer Garden ',
+                  title: 'Wave Wall Performance Platform',
                   logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
                   description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
                 },
                 3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
+                  title: 'Miller Lite Beer Garden',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
+                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
                 },
                 4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
+                  title: 'LAKE STAGE IN POLK BROS PARK',
+                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
                 }
               }
             }
@@ -202,7 +203,7 @@ export const store = new Vuex.Store({
           background: 'countdown.mp4',
           duration: '30',
           startHours: '00',
-          startMinutes: '01',
+          startMinutes: '00',
         },
         11: {
           name: 'welcome3',
@@ -321,7 +322,7 @@ export const store = new Vuex.Store({
           background: 'countdown.mp4',
           duration: '30',
           startHours: '00',
-          startMinutes: '01',
+          startMinutes: '00',
         },
         16: {
           name: 'welcome4',
@@ -405,7 +406,7 @@ export const store = new Vuex.Store({
           background: 'countdown.mp4',
           duration: '30',
           startHours: '00',
-          startMinutes: '01',
+          startMinutes: '00',
         }
       }
     },
@@ -416,29 +417,25 @@ export const store = new Vuex.Store({
           template: 'video',
           template4: null,
           background: 'welcome_1.mp4',
-          // duration: '61'
-          duration: '11'
+          duration: '61'
         },
         2: {
           name: 'branding1',
           template: 'video',
           template4: null,
           background: 'branding_1.mp4',
-          // duration: '33'
-          duration: '13'
+          duration: '33'
         },
         3: {
           name: 'program1',
           template: 'TemplateList',
           template4: null,
           background: 'program_1.mp4',
-          // duration: '91',
-          duration: '11',
+          duration: '91',
           lists: {
             1: {
               headline: 'TODAY AT <br> NAVY PIER',
-              // duration: '91',
-              duration: '11',
+              duration: '91',
               events: {
                 1: {
                   title: 'Chicago World Music Festival and World Dumpling Festival',
@@ -456,13 +453,11 @@ export const store = new Vuex.Store({
           template: 'TrailerList',
           template4: null,
           background: 'trailer_1.mp4',
-          // duration: '48',
-          duration: '8',
+          duration: '48',
           lists: {
             1: {
               headline: 'WATER COLOR JAZZ SERIES',
-              // duration: '48',
-              duration: '8',
+              duration: '48',
               logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
               description: 'Join us all summer long for free live jazz, presented in partnership with the Jazz Institute of Chicago.',
               events: {
@@ -577,23 +572,24 @@ export const store = new Vuex.Store({
               sponsor: 'Presented by Sol',
               events: {
                 1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
+                  title: 'Miller Lite Beer Garden ',
                   logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
+                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
                 },
                 2: {
-                  title: 'Miller Lite Beer Garden ',
+                  title: 'Wave Wall Performance Platform',
                   logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
                   description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
                 },
                 3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
+                  title: 'Miller Lite Beer Garden',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
+                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
                 },
                 4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
+                  title: 'LAKE STAGE IN POLK BROS PARK',
+                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
                 }
               }
             }
@@ -977,23 +973,24 @@ export const store = new Vuex.Store({
               sponsor: 'Presented by Sol',
               events: {
                 1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
+                  title: 'Miller Lite Beer Garden ',
                   logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
+                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
                 },
                 2: {
-                  title: 'Miller Lite Beer Garden ',
+                  title: 'Wave Wall Performance Platform',
                   logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
                   description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
                 },
                 3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
+                  title: 'Miller Lite Beer Garden',
+                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
+                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
                 },
                 4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
+                  title: 'LAKE STAGE IN POLK BROS PARK',
+                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
+                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
                 }
               }
             }
@@ -1241,6 +1238,10 @@ export const store = new Vuex.Store({
       var sceneCount = Object.keys(state[state.current.day].scenes).length;
       var nextSceneId = state.current.scene + 1;
 
+      if (nextSceneId > sceneCount) {
+        nextSceneId = nextSceneId - sceneCount;
+      }
+
       if (state[state.current.day].scenes[nextSceneId].name == 'countdown') {
         var currentDate = new Date();
 
@@ -1278,7 +1279,6 @@ export const store = new Vuex.Store({
       state.current.scene = payload;
     },
     setDay: (state, payload) => {
-      console.log('setDay');
       state.current.day = payload;
     },
     FETCH_EVENTS(state, events) {
@@ -1298,7 +1298,6 @@ export const store = new Vuex.Store({
         commit("FETCH_EVENTS", response.data);
       })
       .catch((error => {
-          console.log('event fetch failed');
           console.log(error);
       }))
     }
