@@ -157,44 +157,6 @@ export const store = new Vuex.Store({
           }
         },
         9: {
-          name: 'trailer2',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_2.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Miller Lite Beer Garden ',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
-                },
-                2: {
-                  title: 'Wave Wall Performance Platform',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
-                },
-                4: {
-                  title: 'LAKE STAGE IN POLK BROS PARK',
-                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
-                }
-              }
-            }
-          }
-        },
-        10: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -205,21 +167,21 @@ export const store = new Vuex.Store({
           startHours: '00',
           startMinutes: '00',
         },
-        11: {
+        10: {
           name: 'welcome3',
           template: 'video',
           template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
-        12: {
+        11: {
           name: 'branding3',
           template: 'video',
           template4: null,
           background: 'branding_3.mp4',
           duration: '33'
         },
-        13: {
+        12: {
           name: 'program3',
           template: 'TemplateList',
           template4: null,
@@ -241,7 +203,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        14: {
+        13: {
           name: 'trailer3',
           template: 'TrailerList',
           template4: null,
@@ -313,7 +275,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        15: {
+        14: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -324,21 +286,21 @@ export const store = new Vuex.Store({
           startHours: '00',
           startMinutes: '00',
         },
-        16: {
+        15: {
           name: 'welcome4',
           template: 'video',
           template4: null,
           background: 'welcome_4.mp4',
           duration: '61'
         },
-        17: {
+        16: {
           name: 'branding4',
           template: 'video',
           template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
-        18: {
+        17: {
           name: 'program4',
           template: 'TemplateList',
           template4: null,
@@ -360,44 +322,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        19: {
-          name: 'trailer4',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_4.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                },
-                2: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
-                },
-                4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
-                }
-              }
-            }
-          }
-        },
-        20: {
+        18: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -407,6 +332,13 @@ export const store = new Vuex.Store({
           duration: '30',
           startHours: '00',
           startMinutes: '00',
+        },
+        19: {
+          name: 'welcome5',
+          template: 'video',
+          template4: null,
+          background: 'welcome_5.mp4',
+          duration: '61'
         }
       }
     },
@@ -558,44 +490,6 @@ export const store = new Vuex.Store({
           }
         },
         9: {
-          name: 'trailer2',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_2.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Miller Lite Beer Garden ',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
-                },
-                2: {
-                  title: 'Wave Wall Performance Platform',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
-                },
-                4: {
-                  title: 'LAKE STAGE IN POLK BROS PARK',
-                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
-                }
-              }
-            }
-          }
-        },
-        10: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -606,21 +500,21 @@ export const store = new Vuex.Store({
           startHours: '21',
           startMinutes: '30',
         },
-        11: {
+        10: {
           name: 'welcome3',
           template: 'video',
           template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
-        12: {
+        11: {
           name: 'branding3',
           template: 'video',
           template4: null,
           background: 'branding_3.mp4',
           duration: '33'
         },
-        13: {
+        12: {
           name: 'program3',
           template: 'TemplateList',
           template4: null,
@@ -642,7 +536,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        14: {
+        13: {
           name: 'trailer3',
           template: 'TrailerList',
           template4: null,
@@ -714,7 +608,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        15: {
+        14: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -725,21 +619,21 @@ export const store = new Vuex.Store({
           startHours: '21',
           startMinutes: '30',
         },
-        16: {
+        15: {
           name: 'welcome4',
           template: 'video',
           template4: null,
           background: 'welcome_4.mp4',
           duration: '61'
         },
-        17: {
+        16: {
           name: 'branding4',
           template: 'video',
           template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
-        18: {
+        17: {
           name: 'program4',
           template: 'TemplateList',
           template4: null,
@@ -761,44 +655,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        19: {
-          name: 'trailer4',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_4.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                },
-                2: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
-                },
-                4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
-                }
-              }
-            }
-          }
-        },
-        20: {
+        18: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -808,6 +665,13 @@ export const store = new Vuex.Store({
           duration: '30',
           startHours: '21',
           startMinutes: '30',
+        },
+        19: {
+          name: 'welcome5',
+          template: 'video',
+          template4: null,
+          background: 'welcome_5.mp4',
+          duration: '61'
         }
       }
     },
@@ -959,44 +823,6 @@ export const store = new Vuex.Store({
           }
         },
         9: {
-          name: 'trailer2',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_2.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Miller Lite Beer Garden ',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                  description: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico'
-                },
-                2: {
-                  title: 'Wave Wall Performance Platform',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 11:30 pm',
-                  description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras'
-                },
-                4: {
-                  title: 'LAKE STAGE IN POLK BROS PARK',
-                  logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                  description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ'
-                }
-              }
-            }
-          }
-        },
-        10: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -1007,21 +833,21 @@ export const store = new Vuex.Store({
           startHours: '22',
           startMinutes: '15',
         },
-        11: {
+        10: {
           name: 'welcome3',
           template: 'video',
           template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
-        12: {
+        11: {
           name: 'branding3',
           template: 'video',
           template4: null,
           background: 'branding_3.mp4',
           duration: '33'
         },
-        13: {
+        12: {
           name: 'program3',
           template: 'TemplateList',
           template4: null,
@@ -1043,7 +869,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        14: {
+        13: {
           name: 'trailer3',
           template: 'TrailerList',
           template4: null,
@@ -1115,7 +941,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        15: {
+        14: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -1126,21 +952,21 @@ export const store = new Vuex.Store({
           startHours: '22',
           startMinutes: '15',
         },
-        16: {
+        15: {
           name: 'welcome4',
           template: 'video',
           template4: null,
           background: 'welcome_4.mp4',
           duration: '61'
         },
-        17: {
+        16: {
           name: 'branding4',
           template: 'video',
           template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
-        18: {
+        17: {
           name: 'program4',
           template: 'TemplateList',
           template4: null,
@@ -1162,44 +988,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        19: {
-          name: 'trailer4',
-          template: 'TrailerList',
-          template4: null,
-          background: 'trailer_4.mp4',
-          duration: '48',
-          lists: {
-            1: {
-              headline: 'LatiNxt presented by Sol',
-              duration: '48',
-              logistics: 'June 15-16, 2018',
-              description: 'Celebrating the local, national and international artists who are connecting traditional Latin music with modern sounds.',
-              sponsor: 'Presented by Sol',
-              events: {
-                1: {
-                  title: 'Performances by Uproot Andy, Centavrvs, Zuzuka Poderosa, and Dolor Folktronico',
-                  logistics: 'Friday, June 15, 2018 | 5:30 pm - 11:30 pm',
-                },
-                2: {
-                  title: 'Miller Lite Beer Garden',
-                  logistics: 'Saturday, June 16, 2018 | 2:00 pm - 10:15 pm',
-                  description: 'Performances by Dj Jigüe, Dat Garcia, DJ Kinky P, Future Rootz, Pachanga DJ’s, and Sandra Treviño',
-                },
-                3: {
-                    title: 'Wave Wall Performance Platform',
-                    logistics: 'Saturday, June 16, 2018 | 2:00 pm -11:30 pm',
-                    description: 'Performances by Bembona, La Misa Negra, King Coya and Queen Cholas, Boogat, ¡ESSO! Afrojam Funkbeat, Cedeño, and Ayana Contreras',
-                },
-                4: {
-                    title: 'Miller Lite Beer Garden',
-                    logistics: 'Saturday, June 16, 2018 | 3:15 pm - 7:15 pm',
-                    description: 'Performances by Sonido Gallo Negro, Lido Pimienta and ÌFÉ, Lake Stage In Polk Bros Park'
-                }
-              }
-            }
-          }
-        },
-        20: {
+        18: {
           name: 'countdown',
           template: 'TemplateBlank',
           template2: 'TemplateFireworksTitleLeft',
@@ -1209,6 +998,13 @@ export const store = new Vuex.Store({
           duration: '30',
           startHours: '22',
           startMinutes: '15',
+        },
+        19: {
+          name: 'welcome5',
+          template: 'video',
+          template4: null,
+          background: 'welcome_5.mp4',
+          duration: '61'
         }
       }
     }
