@@ -61,6 +61,11 @@ export default {
     TemplateFireworksTitleRight
   },
   created: function () {
+    var day = this.currentDay;
+    var currentDay = this.getCurrentDay();
+    if (day != currentDay) {
+      this.$store.commit('setDay', currentDay);
+    }
     this.sceneLoad();
     this.$store.dispatch('fetchEvents', { self: this });
   },
@@ -70,16 +75,12 @@ export default {
         var currentDate = new Date();
         var sceneId = this.currentScene;
         var day = this.currentDay;
-        var newDay = 'defaultday';
+        var currentDay = this.getCurrentDay();
 
         // CHECK DAY
-        if (currentDate.getDay() == 3) {
-          newDay = ('wednesday');
-        } else if (currentDate.getDay() == 6) {
-          newDay = ('saturday');
-        }
-        if (day != newDay) {
-          this.$store.commit('setDay', newDay);
+        // If the currentDay in store does not equal actual current day
+        if (day != currentDay) {
+          this.$store.commit('setDay', currentDay);
         }
 
         // COUNTDOWN CHECK
@@ -108,7 +109,7 @@ export default {
 
         // FETCH EVENTS
         // Get events from API if it's the first scene
-        if (sceneId == 3) {
+        if (sceneId == 1) {
           this.$store.dispatch('fetchEvents', { self: this });
         }
 
@@ -116,6 +117,17 @@ export default {
         // Setup next scene load
         this.sceneLoad();
       }, this.activeScene.duration * 1000);
+    },
+    getCurrentDay() {
+      var currentDate = new Date();
+
+      if (currentDate.getDay() == 3) {
+        return 'wednesday';
+      } else if (currentDate.getDay() == 6) {
+        return 'saturday';
+      } else {
+        return 'defaultday'
+      }
     },
     countdownTimePassed() {
       var date = new Date();
