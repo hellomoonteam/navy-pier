@@ -54,56 +54,16 @@ export const store = new Vuex.Store({
           duration: '48',
           lists: {
             1: {
-              headline: 'WATER COLORS PRESENTED BY CIBC',
+              headline: ' ',
               duration: '48',
-              logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
-              description: 'Join us all summer long for free live jazz, co-curated by the Jazz Institute of Chicago.',
+              logistics:  ' ',
+              description: ' ',
               events: {
                 1: {
-                  title: 'Lowdown Brass Band',
-                  logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
-                  description: 'Lake Stage in Polk Bros Park',
-                },
-                2: {
-                  title: 'NextGenJazz Emerging Artists Project',
-                  logistics: '5:40 PM',
-                  description: 'Leads the audience procession down to the South Dock',
-                },
-                3: {
-                    title: 'Chicago Latin Jazz Festival',
-                    logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                4: {
-                    title: 'Chicago Jazz Orchestra',
-                    logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                5: {
-                    title: 'Lettin’ the Good Times Float',
-                    logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                6: {
-                    title: 'Victor Goines Quartet',
-                    logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                7: {
-                    title: 'Let Freedom Sing',
-                    logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                8: {
-                    title: 'Marquis Hill’s Blacktet',
-                    logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                9: {
-                    title: 'Chicago Afrobeat Project',
-                    logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
+                  title: ' ',
+                  logistics: ' ',
+                  description: ' ',
+                }
               }
             }
           }
@@ -151,56 +111,16 @@ export const store = new Vuex.Store({
           duration: '48',
           lists: {
             1: {
-              headline: 'WATER COLORS PRESENTED BY CIBC',
+              headline: ' ',
               duration: '48',
-              logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
-              description: 'Join us all summer long for free live jazz, co-curated by the Jazz Institute of Chicago.',
+              logistics:  ' ',
+              description: ' ',
               events: {
                 1: {
-                  title: 'Lowdown Brass Band',
-                  logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
-                  description: 'Lake Stage in Polk Bros Park',
-                },
-                2: {
-                  title: 'NextGenJazz Emerging Artists Project',
-                  logistics: '5:40 PM',
-                  description: 'Leads the audience procession down to the South Dock',
-                },
-                3: {
-                    title: 'Chicago Latin Jazz Festival',
-                    logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                4: {
-                    title: 'Chicago Jazz Orchestra',
-                    logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                5: {
-                    title: 'Lettin’ the Good Times Float',
-                    logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                6: {
-                    title: 'Victor Goines Quartet',
-                    logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                7: {
-                    title: 'Let Freedom Sing',
-                    logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                8: {
-                    title: 'Marquis Hill’s Blacktet',
-                    logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                9: {
-                    title: 'Chicago Afrobeat Project',
-                    logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
+                  title: ' ',
+                  logistics: ' ',
+                  description: ' ',
+                }
               }
             }
           }
@@ -248,45 +168,15 @@ export const store = new Vuex.Store({
           duration: '48',
           lists: {
             1: {
-              headline: 'Wiggleworms',
+              headline: ' ',
               duration: '48',
-              logistics: 'June & July, 2018',
-              description: 'Old Town School of Folk Music’s celebrated early childhood music program welcomes kids and families to a musical world!',
+              logistics:  ' ',
+              description: ' ',
               events: {
                 1: {
-                  title: 'Wiggleworms',
-                  logistics: 'Friday, July 6, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                2: {
-                  title: 'Wiggleworms',
-                  logistics: 'Wednesday, July 11, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                3: {
-                  title: 'Wiggleworms',
-                  logistics: 'Friday, July 13, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                4: {
-                  title: 'Wiggleworms',
-                  logistics: 'Wednesday, July 18, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                5: {
-                  title: 'Wiggleworms',
-                  logistics: 'Friday, July 20, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                6: {
-                  title: 'Wiggleworms',
-                  logistics: 'Wednesday, July 25, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
-                },
-                7: {
-                  title: 'Wiggleworms',
-                  logistics: 'Friday, July 27, 2018 | 10:00 am - 11:45 am',
-                  description: 'City Stage In Polk Bros Park'
+                  title: ' ',
+                  logistics: ' ',
+                  description: ' ',
                 }
               }
             }
@@ -335,56 +225,16 @@ export const store = new Vuex.Store({
           duration: '48',
           lists: {
             1: {
-              headline: 'WATER COLORS PRESENTED BY CIBC',
+              headline: ' ',
               duration: '48',
-              logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
-              description: 'Join us all summer long for free live jazz, co-curated by the Jazz Institute of Chicago.',
+              logistics:  ' ',
+              description: ' ',
               events: {
                 1: {
-                  title: 'Lowdown Brass Band',
-                  logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
-                  description: 'Lake Stage in Polk Bros Park',
-                },
-                2: {
-                  title: 'NextGenJazz Emerging Artists Project',
-                  logistics: '5:40 PM',
-                  description: 'Leads the audience procession down to the South Dock',
-                },
-                3: {
-                    title: 'Chicago Latin Jazz Festival',
-                    logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                4: {
-                    title: 'Chicago Jazz Orchestra',
-                    logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                5: {
-                    title: 'Lettin’ the Good Times Float',
-                    logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                6: {
-                    title: 'Victor Goines Quartet',
-                    logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                7: {
-                    title: 'Let Freedom Sing',
-                    logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                8: {
-                    title: 'Marquis Hill’s Blacktet',
-                    logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
-                9: {
-                    title: 'Chicago Afrobeat Project',
-                    logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
-                    description: 'Lake Stage in Polk Bros Park'
-                },
+                  title: ' ',
+                  logistics: ' ',
+                  description: ' ',
+                }
               }
             }
           }
@@ -466,6 +316,12 @@ export const store = new Vuex.Store({
       state[state.current.day].scenes[7].lists[1].events = events.events;
       state[state.current.day].scenes[11].lists[1].events = events.events;
       state[state.current.day].scenes[15].lists[1].events = events.events;
+      state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
+      state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
+      state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
+      state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
+
+      console.log('current state: ', state)
     }
   },
   actions: {
