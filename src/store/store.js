@@ -312,16 +312,23 @@ export const store = new Vuex.Store({
     },
     FETCH_EVENTS(state, events) {
       console.log("trailer data fetched: ", events);
+
+      // Set event lists up (a single event list repeats)
       state[state.current.day].scenes[3].lists[1].events = events.events;
       state[state.current.day].scenes[7].lists[1].events = events.events;
       state[state.current.day].scenes[11].lists[1].events = events.events;
       state[state.current.day].scenes[15].lists[1].events = events.events;
-      state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
-      state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
-      state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
-      state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
 
-      console.log('current state: ', state)
+      // Set event trailers up, each slot has it's own trailer data
+      // this logic assumes that we have only one list per event trailer
+      state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
+      state[state.current.day].scenes[4].duration = events.eventTrailers[1].duration;
+      state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
+      state[state.current.day].scenes[8].duration = events.eventTrailers[2].duration;
+      state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
+      state[state.current.day].scenes[12].duration = events.eventTrailers[3].duration;
+      state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
+      state[state.current.day].scenes[16].duration = events.eventTrailers[4].duration;
     }
   },
   actions: {
