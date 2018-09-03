@@ -61,11 +61,12 @@ export default {
     TemplateFireworksTitleRight
   },
   created: function () {
-    var day = this.currentDay;
-    var currentDay = this.getCurrentDay();
-    if (day != currentDay) {
-      this.$store.commit('setDay', currentDay);
-    }
+    // COMMENTED OUT DAY CHECK
+    // var day = this.currentDay;
+    // var currentDay = this.getCurrentDay();
+    // if (day != currentDay) {
+    //   this.$store.commit('setDay', currentDay);
+    // }
     this.sceneLoad();
     this.$store.dispatch('fetchEvents', { self: this });
   },
@@ -79,9 +80,9 @@ export default {
 
         // CHECK DAY
         // If the currentDay in store does not equal actual current day
-        if (day != currentDay) {
-          this.$store.commit('setDay', currentDay);
-        }
+        // if (day != currentDay) {
+        //   this.$store.commit('setDay', currentDay);
+        // }
 
         // COUNTDOWN CHECK
         if (this.nextScene.name == 'countdown') {
