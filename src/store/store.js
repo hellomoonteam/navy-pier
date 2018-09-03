@@ -109,31 +109,20 @@ export const store = new Vuex.Store({
           }
         },
         5: {
-          name: 'countdown',
-          template: 'TemplateBlank',
-          template2: 'TemplateFireworksTitleLeft',
-          template3: 'TemplateFireworksTitleRight',
-          template4: 'TemplateCountdown',
-          background: 'countdown.mp4',
-          duration: '30',
-          startHours: '00',
-          startMinutes: '00',
-        },
-        6: {
           name: 'welcome2',
           template: 'video',
           template4: null,
           background: 'welcome_2.mp4',
           duration: '61'
         },
-        7: {
+        6: {
           name: 'branding2',
           template: 'video',
           template4: null,
           background: 'branding_2.mp4',
           duration: '33'
         },
-        8: {
+        7: {
           name: 'program2',
           template: 'TemplateList',
           template4: null,
@@ -154,32 +143,83 @@ export const store = new Vuex.Store({
             }
           }
         },
-        9: {
-          name: 'countdown',
-          template: 'TemplateBlank',
-          template2: 'TemplateFireworksTitleLeft',
-          template3: 'TemplateFireworksTitleRight',
-          template4: 'TemplateCountdown',
-          background: 'countdown.mp4',
-          duration: '30',
-          startHours: '00',
-          startMinutes: '00',
+        8: {
+          name: 'trailer2',
+          template: 'TrailerList',
+          template4: null,
+          background: 'trailer_2.mp4',
+          duration: '48',
+          lists: {
+            1: {
+              headline: 'WATER COLORS PRESENTED BY CIBC',
+              duration: '48',
+              logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
+              description: 'Join us all summer long for free live jazz, co-curated by the Jazz Institute of Chicago.',
+              events: {
+                1: {
+                  title: 'Lowdown Brass Band',
+                  logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park',
+                },
+                2: {
+                  title: 'NextGenJazz Emerging Artists Project',
+                  logistics: '5:40 PM',
+                  description: 'Leads the audience procession down to the South Dock',
+                },
+                3: {
+                    title: 'Chicago Latin Jazz Festival',
+                    logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                4: {
+                    title: 'Chicago Jazz Orchestra',
+                    logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                5: {
+                    title: 'Lettin’ the Good Times Float',
+                    logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                6: {
+                    title: 'Victor Goines Quartet',
+                    logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                7: {
+                    title: 'Let Freedom Sing',
+                    logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                8: {
+                    title: 'Marquis Hill’s Blacktet',
+                    logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                9: {
+                    title: 'Chicago Afrobeat Project',
+                    logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+              }
+            }
+          }
         },
-        10: {
+        9: {
           name: 'welcome3',
           template: 'video',
           template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
-        11: {
+        10: {
           name: 'branding3',
           template: 'video',
           template4: null,
           background: 'branding_3.mp4',
           duration: '33'
         },
-        12: {
+        11: {
           name: 'program3',
           template: 'TemplateList',
           template4: null,
@@ -200,7 +240,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        13: {
+        12: {
           name: 'trailer3',
           template: 'TrailerList',
           template4: null,
@@ -252,32 +292,21 @@ export const store = new Vuex.Store({
             }
           }
         },
-        14: {
-          name: 'countdown',
-          template: 'TemplateBlank',
-          template2: 'TemplateFireworksTitleLeft',
-          template3: 'TemplateFireworksTitleRight',
-          template4: 'TemplateCountdown',
-          background: 'countdown.mp4',
-          duration: '30',
-          startHours: '00',
-          startMinutes: '00',
-        },
-        15: {
+        13: {
           name: 'welcome4',
           template: 'video',
           template4: null,
           background: 'welcome_4.mp4',
           duration: '61'
         },
-        16: {
+        14: {
           name: 'branding4',
           template: 'video',
           template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
-        17: {
+        15: {
           name: 'program4',
           template: 'TemplateList',
           template4: null,
@@ -298,16 +327,67 @@ export const store = new Vuex.Store({
             }
           }
         },
-        18: {
-          name: 'countdown',
-          template: 'TemplateBlank',
-          template2: 'TemplateFireworksTitleLeft',
-          template3: 'TemplateFireworksTitleRight',
-          template4: 'TemplateCountdown',
-          background: 'countdown.mp4',
-          duration: '30',
-          startHours: '00',
-          startMinutes: '00',
+        16: {
+          name: 'trailer4',
+          template: 'TrailerList',
+          template4: null,
+          background: 'trailer_4.mp4',
+          duration: '48',
+          lists: {
+            1: {
+              headline: 'WATER COLORS PRESENTED BY CIBC',
+              duration: '48',
+              logistics: 'Fridays and Select Dates July 6 – August 24, 2018',
+              description: 'Join us all summer long for free live jazz, co-curated by the Jazz Institute of Chicago.',
+              events: {
+                1: {
+                  title: 'Lowdown Brass Band',
+                  logistics: 'Friday, July 6, 2018, 6:30 pm - 8:30 pm',
+                  description: 'Lake Stage in Polk Bros Park',
+                },
+                2: {
+                  title: 'NextGenJazz Emerging Artists Project',
+                  logistics: '5:40 PM',
+                  description: 'Leads the audience procession down to the South Dock',
+                },
+                3: {
+                    title: 'Chicago Latin Jazz Festival',
+                    logistics: 'Sunday, July 15, 2018, 3 pm - 6 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                4: {
+                    title: 'Chicago Jazz Orchestra',
+                    logistics: 'Friday, July 20, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                5: {
+                    title: 'Lettin’ the Good Times Float',
+                    logistics: 'Saturday, July 21, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                6: {
+                    title: 'Victor Goines Quartet',
+                    logistics: 'Friday, August 3, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                7: {
+                    title: 'Let Freedom Sing',
+                    logistics: 'Friday, August 10, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                8: {
+                    title: 'Marquis Hill’s Blacktet',
+                    logistics: 'Friday, August 17, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+                9: {
+                    title: 'Chicago Afrobeat Project',
+                    logistics: 'Friday, August 24, 2018, 6:30 pm - 8:30 pm',
+                    description: 'Lake Stage in Polk Bros Park'
+                },
+              }
+            }
+          }
         },
       }
     }
@@ -381,12 +461,11 @@ export const store = new Vuex.Store({
       state.current.day = payload;
     },
     FETCH_EVENTS(state, events) {
-      console.log("trailer data: ", events);
-
+      console.log("trailer data fetched: ", events);
       state[state.current.day].scenes[3].lists[1].events = events.events;
-      state[state.current.day].scenes[8].lists[1].events = events.events;
-      state[state.current.day].scenes[12].lists[1].events = events.events;
-      state[state.current.day].scenes[17].lists[1].events = events.events;
+      state[state.current.day].scenes[7].lists[1].events = events.events;
+      state[state.current.day].scenes[11].lists[1].events = events.events;
+      state[state.current.day].scenes[15].lists[1].events = events.events;
     }
   },
   actions: {
@@ -396,7 +475,6 @@ export const store = new Vuex.Store({
 
       Vue.axios.get(endpoint)
       .then((response) => {
-        console.log('events fetched');
         commit("FETCH_EVENTS", response.data);
       })
       .catch((error => {
