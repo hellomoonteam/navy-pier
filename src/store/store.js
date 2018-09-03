@@ -985,6 +985,8 @@ export const store = new Vuex.Store({
       state.current.day = payload;
     },
     FETCH_EVENTS(state, events) {
+      console.log("trailer data: ", events);
+
       state[state.current.day].scenes[3].lists[1].events = events.events;
       state[state.current.day].scenes[8].lists[1].events = events.events;
       state[state.current.day].scenes[12].lists[1].events = events.events;
@@ -993,7 +995,8 @@ export const store = new Vuex.Store({
   },
   actions: {
     fetchEvents({ commit }, { self })  {
-      var endpoint = "https://navypier.org/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
+      // var endpoint = "https://navypier.org/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
+      var endpoint = "http://navypierdev.wpengine.com/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
 
       Vue.axios.get(endpoint)
       .then((response) => {
