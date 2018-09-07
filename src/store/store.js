@@ -271,6 +271,7 @@ export const store = new Vuex.Store({
         nextSceneId = nextSceneId - sceneCount;
       }
 
+      // Countdown Check (sometimes this is disabled)
       if (state[state.current.day].scenes[nextSceneId].name == 'countdown') {
         var currentDate = new Date();
 
@@ -291,6 +292,14 @@ export const store = new Vuex.Store({
 
         // If countdown time has passed or it's not the right day
         if (hours < 0) {
+          nextSceneId += 1;
+        }
+      }
+
+      // Event Trailer Check (some event trailers are disabled)
+      if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
+        if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
+          console.log('skip event trailer');
           nextSceneId += 1;
         }
       }
