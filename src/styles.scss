@@ -1,0 +1,256 @@
+
+// LAYOUT
+$gutter: 200px;
+$screen: 640px;
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.screen-a,
+.screen-b,
+.screen-c,
+.screen-d {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: $screen;
+  height: 1262px;
+}
+.screen-a {
+  left: 0;
+}
+.screen-b {
+  left: ($gutter * 1) + ($screen * 1);
+}
+.screen-c {
+  left: ($gutter * 2) + ($screen * 2);
+}
+.screen-d {
+  left: ($gutter * 3) + ($screen * 3);
+}
+
+// Typography
+h1, h2, h3, h4, p {
+  position: relative;
+  color: white;
+  font-family: "Stainless";
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  margin: 0 0 30px 0;
+  line-height: 65px;
+  font-size: 65px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2 {
+  margin: 0 0 20px 0;
+  line-height: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+h3 {
+  margin: 10px 0;
+  line-height: 25px;
+  font-size: 17px;
+}
+h4 {
+  margin: 0 0 20px 0;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+p {
+  margin: 0 0 20px 0;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+img {
+  margin: 30px 0 0 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 135px 135px 100px 35px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.trailer-info {
+  h2, p {
+    margin-bottom: 30px;
+  }
+}
+
+.events-wrap {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background: white;
+    height: 3px;
+    width: 0%;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+}
+
+.event {
+  padding: 35px 0 15px 0;
+  border-top: 3px solid white;
+
+  &:first-child {
+    margin-top: 20px;
+    border-top: 3px solid transparent;
+  }
+  &.offscreen {
+    border-top: 3px solid transparent;
+    transition: border-top .1s 1.9s;
+  }
+}
+
+// Animation
+//------------------------------------------
+
+// Lines
+.events-wrap:before,
+.events-wrap:after {
+  width: 0%;
+}
+.animate_in .events-wrap:before,
+.animate_in .events-wrap:after {
+  width: 100%;
+  transition: width 2s ease-out;
+}
+.animate_out .events-wrap:before,
+.animate_out .events-wrap:after {
+  width: 0%;
+  transition: width 2s ease-in;
+}
+
+
+// Event List
+.events {
+  transition: margin-top 2s ease-out;
+}
+.events .event:first-child {
+  margin-top: 0;
+  opacity: 0;
+}
+.animate_in .event:first-child {
+  opacity: 1;
+  animation: event-first-in 2s;
+}
+.animate_out .event:first-child {
+  animation: event-first-out 2s;
+}
+@keyframes event-first-in {
+  0%   { opacity: 0; margin-top: 20px; }
+  30%  { opacity: 0; margin-top: 20px; }
+  100% { opacity: 1; margin-top: 0; }
+}
+@keyframes event-first-out {
+  0%   { opacity: 1; margin-top: 0; }
+  30%  { opacity: 1; margin-top: 0; }
+  100% { opacity: 0; margin-top: 20px; }
+}
+
+.event {
+  opacity: 0;
+}
+.animate_in .event {
+  opacity: 1;
+  animation: event-in 2s;
+}
+.animate_out .event {
+  animation: event-out 2s;
+}
+@keyframes event-in {
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes event-out {
+  0%   { opacity: 1; }
+  30%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+// Heading
+.heading {
+  position: relative;
+  opacity: 0;
+  top: 20px;
+}
+.animate_in .heading {
+  opacity: 1;
+  top: 0;
+  animation: heading-in 2s;
+}
+.animate_out .heading {
+  animation: heading-out 2s;
+}
+
+@keyframes heading-in {
+  0%   { opacity: 0; top: 20px; }
+  30%  { opacity: 0; top: 20px; }
+  60% { opacity: 1; top: 0;}
+  100% { opacity: 1; top: 0;}
+}
+@keyframes heading-out {
+  0%   { opacity: 1; top: 0; }
+  30%  { opacity: 1; top: 0; }
+  60% { opacity: 0; top: 20px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+// Heading
+.trailer-info {
+  position: relative;
+  opacity: 0;
+  top: 20px;
+}
+.animate_in .trailer-info {
+  opacity: 1;
+  top: 0;
+  animation: trailer-info-in 2s;
+}
+.animate_out .trailer-info {
+  animation: trailer-info-out 2s;
+}
+
+@keyframes trailer-info-in {
+  0%   { opacity: 0; top: 20px; }
+  30%  { opacity: 0; top: 20px; }
+  60% { opacity: 1; top: 0;}
+  100% { opacity: 1; top: 0;}
+}
+@keyframes trailer-info-out {
+  0%   { opacity: 1; top: 0; }
+  30%  { opacity: 1; top: 0; }
+  60% { opacity: 0; top: 20px; }
+  100% { opacity: 0; top: 20px; }
+}
