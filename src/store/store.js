@@ -330,20 +330,24 @@ export const store = new Vuex.Store({
 
       // Set event trailers up, each slot has it's own trailer data
       // this logic assumes that we have only one list per event trailer
-      state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
-      state[state.current.day].scenes[4].duration = events.eventTrailers[1].duration;
-      state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
-      state[state.current.day].scenes[8].duration = events.eventTrailers[2].duration;
-      state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
-      state[state.current.day].scenes[12].duration = events.eventTrailers[3].duration;
-      state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
-      state[state.current.day].scenes[16].duration = events.eventTrailers[4].duration;
+      if (Object.keys(events.eventTrailers).length >= 4) {
+        state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
+        state[state.current.day].scenes[4].duration = events.eventTrailers[1].duration;
+        state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
+        state[state.current.day].scenes[8].duration = events.eventTrailers[2].duration;
+        state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
+        state[state.current.day].scenes[12].duration = events.eventTrailers[3].duration;
+        state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
+        state[state.current.day].scenes[16].duration = events.eventTrailers[4].duration;
+      } else {
+        console.log('not enough trailer data - no trailers loaded');
+      }
     }
   },
   actions: {
     fetchEvents({ commit }, { self })  {
-      // var endpoint = "https://navypier.org/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
-      var endpoint = "http://navypierdev.wpengine.com/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
+      var endpoint = "https://navypier.org/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
+      // var endpoint = "http://navypierdev.wpengine.com/wp-json/concierge/v1/today?api_key=Q4CaKY3zUn24djY6jVbr52VP";
 
       Vue.axios.get(endpoint)
       .then((response) => {
