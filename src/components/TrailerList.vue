@@ -3,7 +3,7 @@
     <div class="heading">
       <h1 v-html="activeList.headline"></h1>
     </div>
-    <div class="trailer-info">
+    <div class="description">
       <h2 v-if="activeList.logistics" v-html="activeList.logistics"></h2>
       <p v-if="activeList.description">{{ activeList.description }}</p>
     </div>

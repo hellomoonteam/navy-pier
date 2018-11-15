@@ -74,6 +74,12 @@ p {
   font-size: 16px;
   font-weight: normal;
 }
+li {
+  margin: 0 0 20px 20px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: normal;
+}
 
 img {
   margin: 30px 0 0 0;
@@ -87,7 +93,11 @@ img {
   box-sizing: border-box;
 }
 
-.trailer-info {
+.description {
+  color: white;
+  line-height: 20px;
+  font-size: 16px;
+
   h2, p {
     margin-bottom: 30px;
   }
@@ -228,27 +238,27 @@ img {
 }
 
 // Heading
-.trailer-info {
+.description {
   position: relative;
   opacity: 0;
   top: 20px;
 }
-.animate_in .trailer-info {
+.animate_in .description {
   opacity: 1;
   top: 0;
-  animation: trailer-info-in 2s;
+  animation: description-in 2s;
 }
-.animate_out .trailer-info {
-  animation: trailer-info-out 2s;
+.animate_out .description {
+  animation: description-out 2s;
 }
 
-@keyframes trailer-info-in {
+@keyframes description-in {
   0%   { opacity: 0; top: 20px; }
   30%  { opacity: 0; top: 20px; }
   60% { opacity: 1; top: 0;}
   100% { opacity: 1; top: 0;}
 }
-@keyframes trailer-info-out {
+@keyframes description-out {
   0%   { opacity: 1; top: 0; }
   30%  { opacity: 1; top: 0; }
   60% { opacity: 0; top: 20px; }
