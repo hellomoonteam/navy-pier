@@ -31,6 +31,7 @@ import TemplateCountdown from './components/TemplateCountdown.vue';
 import TemplateBlank from './components/TemplateBlank.vue';
 import TemplateFireworksTitleLeft from './components/TemplateFireworksTitleLeft.vue';
 import TemplateFireworksTitleRight from './components/TemplateFireworksTitleRight.vue';
+import TemplateEvent from './components/TemplateEvent.vue';
 
 export default {
   computed: {
@@ -58,7 +59,8 @@ export default {
     TemplateCountdown,
     TemplateBlank,
     TemplateFireworksTitleLeft,
-    TemplateFireworksTitleRight
+    TemplateFireworksTitleRight,
+    TemplateEvent
   },
   created: function () {
     // COMMENTED OUT DAY CHECK

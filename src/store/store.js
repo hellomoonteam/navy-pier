@@ -18,6 +18,19 @@ export const store = new Vuex.Store({
           background: 'welcome_1.mp4',
           duration: '61'
         },
+        // 2: {
+        //   name: 'event1',
+        //   template: 'TemplateEvent',
+        //   template4: null,
+        //   background: 'program_1.mp4',
+        //   event: {
+        //     title: 'Special Event',
+        //     subtitle: 'Special Event Sub-Title',
+        //     content: '<p>The content of the <em>special</em> event.</p><ul><li>List 1</li><li>List 2</li><li>List 3</li></ul>',
+        //     duration: '61'
+        //   }
+        // },
+
         2: {
           name: 'branding1',
           template: 'video',
