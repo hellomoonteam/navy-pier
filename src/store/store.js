@@ -30,7 +30,7 @@ export const store = new Vuex.Store({
           template: 'TemplateEvent',
           template4: null,
           background: 'event_1.mp4',
-          duration: '61',
+          duration: '57',
           event: {
             title: 'Special Event',
             subtitle: 'Special Event Sub-Title',
