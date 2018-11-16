@@ -16,38 +16,37 @@ export const store = new Vuex.Store({
           template: 'video',
           template4: null,
           background: 'welcome_1.mp4',
-          duration: '61'
+          duration: '11'
         },
-        // 2: {
-        //   name: 'event1',
-        //   template: 'TemplateEvent',
-        //   template4: null,
-        //   background: 'program_1.mp4',
-        //   event: {
-        //     title: 'Special Event',
-        //     subtitle: 'Special Event Sub-Title',
-        //     content: '<p>The content of the <em>special</em> event.</p><ul><li>List 1</li><li>List 2</li><li>List 3</li></ul>',
-        //     duration: '61'
-        //   }
-        // },
-
         2: {
           name: 'branding1',
           template: 'video',
           template4: null,
           background: 'branding_1.mp4',
-          duration: '33'
+          duration: '13'
         },
         3: {
+          name: 'event1',
+          template: 'TemplateEvent',
+          template4: null,
+          background: 'trailer_1.mp4',
+          duration: '11',
+          event: {
+            title: 'Special Event',
+            subtitle: 'Special Event Sub-Title',
+            content: '<p>The content of the <em>special</em> event.</p><ul><li>List 1</li><li>List 2</li><li>List 3</li></ul>',
+          }
+        },
+        4: {
           name: 'program1',
           template: 'TemplateList',
           template4: null,
           background: 'program_1.mp4',
-          duration: '91',
+          duration: '11',
           lists: {
             1: {
               headline: 'TODAY AT <br> NAVY PIER',
-              duration: '91',
+              duration: '11',
               events: {
                 1: {
                   title: ' ',
@@ -59,16 +58,16 @@ export const store = new Vuex.Store({
             }
           }
         },
-        4: {
+        5: {
           name: 'trailer1',
           template: 'TrailerList',
           template4: null,
           background: 'trailer_1.mp4',
-          duration: '48',
+          duration: '18',
           lists: {
             1: {
               headline: ' ',
-              duration: '48',
+              duration: '18',
               logistics:  ' ',
               description: ' ',
               events: {
@@ -81,21 +80,21 @@ export const store = new Vuex.Store({
             }
           }
         },
-        5: {
+        6: {
           name: 'welcome2',
           template: 'video',
           template4: null,
           background: 'welcome_2.mp4',
           duration: '61'
         },
-        6: {
+        7: {
           name: 'branding2',
           template: 'video',
           template4: null,
           background: 'branding_2.mp4',
           duration: '33'
         },
-        7: {
+        8: {
           name: 'program2',
           template: 'TemplateList',
           template4: null,
@@ -116,7 +115,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        8: {
+        9: {
           name: 'trailer2',
           template: 'TrailerList',
           template4: null,
@@ -138,21 +137,21 @@ export const store = new Vuex.Store({
             }
           }
         },
-        9: {
+        10: {
           name: 'welcome3',
           template: 'video',
           template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
-        10: {
+        11: {
           name: 'branding3',
           template: 'video',
           template4: null,
           background: 'branding_3.mp4',
           duration: '33'
         },
-        11: {
+        12: {
           name: 'program3',
           template: 'TemplateList',
           template4: null,
@@ -173,7 +172,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        12: {
+        13: {
           name: 'trailer3',
           template: 'TrailerList',
           template4: null,
@@ -195,21 +194,21 @@ export const store = new Vuex.Store({
             }
           }
         },
-        13: {
+        14: {
           name: 'welcome4',
           template: 'video',
           template4: null,
           background: 'welcome_4.mp4',
           duration: '61'
         },
-        14: {
+        15: {
           name: 'branding4',
           template: 'video',
           template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
-        15: {
+        16: {
           name: 'program4',
           template: 'TemplateList',
           template4: null,
@@ -230,7 +229,7 @@ export const store = new Vuex.Store({
             }
           }
         },
-        16: {
+        17: {
           name: 'trailer4',
           template: 'TrailerList',
           template4: null,
@@ -336,25 +335,28 @@ export const store = new Vuex.Store({
       console.log("trailer data fetched: ", events);
 
       // Set event lists up (a single event list repeats)
-      state[state.current.day].scenes[3].lists[1].events = events.events;
-      state[state.current.day].scenes[7].lists[1].events = events.events;
-      state[state.current.day].scenes[11].lists[1].events = events.events;
-      state[state.current.day].scenes[15].lists[1].events = events.events;
+      state[state.current.day].scenes[4].lists[1].events = events.events;
+      state[state.current.day].scenes[8].lists[1].events = events.events;
+      state[state.current.day].scenes[12].lists[1].events = events.events;
+      state[state.current.day].scenes[16].lists[1].events = events.events;
 
       // Set event trailers up, each slot has it's own trailer data
       // this logic assumes that we have only one list per event trailer
       if (Object.keys(events.eventTrailers).length >= 4) {
-        state[state.current.day].scenes[4].lists[1] = events.eventTrailers[1];
-        state[state.current.day].scenes[4].duration = events.eventTrailers[1].duration;
-        state[state.current.day].scenes[8].lists[1] = events.eventTrailers[2];
-        state[state.current.day].scenes[8].duration = events.eventTrailers[2].duration;
-        state[state.current.day].scenes[12].lists[1] = events.eventTrailers[3];
-        state[state.current.day].scenes[12].duration = events.eventTrailers[3].duration;
-        state[state.current.day].scenes[16].lists[1] = events.eventTrailers[4];
-        state[state.current.day].scenes[16].duration = events.eventTrailers[4].duration;
+        state[state.current.day].scenes[5].lists[1] = events.eventTrailers[1];
+        state[state.current.day].scenes[5].duration = events.eventTrailers[1].duration;
+        state[state.current.day].scenes[9].lists[1] = events.eventTrailers[2];
+        state[state.current.day].scenes[9].duration = events.eventTrailers[2].duration;
+        state[state.current.day].scenes[13].lists[1] = events.eventTrailers[3];
+        state[state.current.day].scenes[13].duration = events.eventTrailers[3].duration;
+        state[state.current.day].scenes[17].lists[1] = events.eventTrailers[4];
+        state[state.current.day].scenes[17].duration = events.eventTrailers[4].duration;
       } else {
         console.log('not enough trailer data - no trailers loaded');
       }
+
+      // Special Events
+      state[state.current.day].scenes[3].event = events.specialEvents[1];
     }
   },
   actions: {
