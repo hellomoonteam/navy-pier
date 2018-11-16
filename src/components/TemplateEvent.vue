@@ -26,6 +26,9 @@ export default {
     },
     eventContent() {
       return this.activeScene.event;
+    },
+    eventDuration() {
+      return this.activeScene.duration;
     }
   },
   created: function () {
@@ -40,7 +43,7 @@ export default {
       }, 500);
     },
     animateOut() {
-      var listDuration = (this.eventContent.duration - 2)  * 1000; // In Milliseconds
+      var listDuration = (this.eventDuration - 2)  * 1000; // In Milliseconds
       setTimeout( () => {
         this.animateInClass = false;
         this.animateOutClass = true;
