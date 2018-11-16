@@ -16,21 +16,21 @@ export const store = new Vuex.Store({
           template: 'video',
           template4: null,
           background: 'welcome_1.mp4',
-          duration: '11'
+          duration: '61'
         },
         2: {
           name: 'branding1',
           template: 'video',
           template4: null,
           background: 'branding_1.mp4',
-          duration: '13'
+          duration: '33'
         },
         3: {
           name: 'event1',
           template: 'TemplateEvent',
           template4: null,
-          background: 'trailer_1.mp4',
-          duration: '11',
+          background: 'event_1.mp4',
+          duration: '61',
           event: {
             title: 'Special Event',
             subtitle: 'Special Event Sub-Title',
@@ -42,11 +42,11 @@ export const store = new Vuex.Store({
           template: 'TemplateList',
           template4: null,
           background: 'program_1.mp4',
-          duration: '11',
+          duration: '91',
           lists: {
             1: {
               headline: 'TODAY AT <br> NAVY PIER',
-              duration: '11',
+              duration: '91',
               events: {
                 1: {
                   title: ' ',
@@ -63,11 +63,11 @@ export const store = new Vuex.Store({
           template: 'TrailerList',
           template4: null,
           background: 'trailer_1.mp4',
-          duration: '18',
+          duration: '48',
           lists: {
             1: {
               headline: ' ',
-              duration: '18',
+              duration: '48',
               logistics:  ' ',
               description: ' ',
               events: {
