@@ -38,17 +38,14 @@ export default {
     currentScene() {
       return this.$store.getters.currentScene;
     },
-    currentDay() {
-      return this.$store.getters.currentDay;
-    },
     sceneCount() {
       return this.$store.getters.sceneCount;
     },
     activeScene() {
       return this.$store.getters.activeScene;
     },
-    nextScene() {
-      return this.$store.getters.nextScene;
+    skipNextScene() {
+      return this.$store.getters.skipNextScene;
     }
   },
   components: {
@@ -63,39 +60,19 @@ export default {
     TemplateEvent
   },
   created: function () {
-    // COMMENTED OUT DAY CHECK
-    // var day = this.currentDay;
-    // var currentDay = this.getCurrentDay();
-    // if (day != currentDay) {
-    //   this.$store.commit('setDay', currentDay);
-    // }
     this.sceneLoad();
     this.$store.dispatch('fetchEvents', { self: this });
   },
   methods: {
     sceneLoad() {
       setTimeout( () => {
-        var currentDate = new Date();
         var sceneId = this.currentScene;
-        var day = this.currentDay;
-        var currentDay = this.getCurrentDay();
 
-        // CHECK DAY
-        // If the currentDay in store does not equal actual current day
-        // if (day != currentDay) {
-        //   this.$store.commit('setDay', currentDay);
-        // }
+        sceneId += 1;
 
-        // COUNTDOWN CHECK
-        if (this.nextScene.name == 'countdown') {
-          if (this.countdownTimePassed()) {
-            console.log('countdown time passed');
-            sceneId += 2;
-          } else {
-            console.log('countdown time NOT passed');
-            sceneId += 1;
-          }
-        } else {
+        // Event Trailer Check (some event trailers are disabled)
+        if (this.skipNextScene) {
+          console.log('skip event trailer from App.vue');
           sceneId += 1;
         }
 
@@ -120,46 +97,6 @@ export default {
         // Setup next scene load
         this.sceneLoad();
       }, this.activeScene.duration * 1000);
-    },
-    getCurrentDay() {
-      var currentDate = new Date();
-
-      if (currentDate.getDay() == 3) {
-        return 'wednesday';
-      } else if (currentDate.getDay() == 6) {
-        return 'saturday';
-      } else {
-        return 'defaultday'
-      }
-    },
-    countdownTimePassed() {
-      var date = new Date();
-      var currentHours = date.getHours();
-      var currentMinutes = date.getMinutes();
-      var currentSeconds = date.getSeconds();
-      var startHours = this.nextScene.startHours;
-      var startMinutes = this.nextScene.startMinutes;
-      var startSeconds = 0;
-
-      // Figure out time difference
-      var hours = startHours - currentHours;
-      var minutes = startMinutes - currentMinutes;
-      var seconds = startSeconds - currentSeconds;
-
-      // Handle negative seconds and minutes
-      if (seconds < 0) {
-        seconds = seconds + 60;
-        minutes = minutes - 1;
-      }
-      if (minutes < 0) {
-        minutes = minutes + 60;
-        hours = hours - 1;
-      }
-      if (hours < 0) {
-        return true;
-      } else {
-        return false;
-      }
     }
   }
 }

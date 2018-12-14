@@ -131,10 +131,10 @@ export const store = new Vuex.Store({
           duration: '61'
         },
         9: {
-          name: 'event1',
+          name: 'event2',
           template: 'TemplateEvent',
           template4: null,
-          background: 'event_1.mp4',
+          background: 'event_2.mp4',
           duration: '58',
           event: {
             title: 'Special Event',
@@ -263,39 +263,9 @@ export const store = new Vuex.Store({
       var sceneCount = Object.keys(state[state.current.day].scenes).length;
       var nextSceneId = state.current.scene + 1;
 
-      if (nextSceneId > sceneCount) {
-        nextSceneId = nextSceneId - sceneCount;
-      }
-
-      // Countdown Check (sometimes this is disabled)
-      if (state[state.current.day].scenes[nextSceneId].name == 'countdown') {
-        var currentDate = new Date();
-
-        // Figure out time difference
-        var hours = state[state.current.day].scenes[nextSceneId].startHours - currentDate.getHours();
-        var minutes = state[state.current.day].scenes[nextSceneId].startMinutes - currentDate.getMinutes();
-        var seconds = 0 - currentDate.getSeconds();
-
-        // Handle negative seconds and minutes
-        if (seconds < 0) {
-          seconds += 60;
-          minutes -= 1;
-        }
-        if (minutes < 0) {
-          minutes += 60;
-          hours -= 1;
-        }
-
-        // If countdown time has passed or it's not the right day
-        if (hours < 0) {
-          nextSceneId += 1;
-        }
-      }
-
       // Event Trailer Check (some event trailers are disabled)
       if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
         if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
-          console.log('skip event trailer');
           nextSceneId += 1;
         }
       }
@@ -306,8 +276,24 @@ export const store = new Vuex.Store({
       }
 
       return state[state.current.day].scenes[nextSceneId];
+    },
+
+    skipNextScene: state => {
+      var skipScene = false;
+      var nextSceneId = state.current.scene + 1;
+
+      // Event Trailer Check (some event trailers are disabled)
+      if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
+        if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
+          skipScene = true;
+        }
+      }
+
+      // returns a boolean indicating if the next scene should be skipped
+      return skipScene;
     }
   },
+
   mutations: {
     setScene: (state, payload) => {
       state.current.scene = payload;
@@ -341,7 +327,7 @@ export const store = new Vuex.Store({
 
       // Special Events
       state[state.current.day].scenes[2].event = events.specialEvents[1];
-      state[state.current.day].scenes[9].event = events.specialEvents[1];
+      state[state.current.day].scenes[9].event = events.specialEvents[2];
     }
   },
   actions: {
