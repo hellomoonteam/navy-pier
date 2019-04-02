@@ -289,6 +289,14 @@ export const store = new Vuex.Store({
         }
       }
 
+      // Special Events Check (some special events are disabled)
+      if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
+
+        if (state[state.current.day].scenes[nextSceneId].event.display != true) {
+          skipScene = true;
+        }
+      }
+
       // returns a boolean indicating if the next scene should be skipped
       return skipScene;
     }
