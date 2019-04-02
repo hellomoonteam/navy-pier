@@ -253,14 +253,6 @@ export const store = new Vuex.Store({
     },
     nextScene: state => {
       var sceneCount = Object.keys(state[state.current.day].scenes).length;
-      var nextScene = state.current.scene + 1;
-      if (nextScene > sceneCount) {
-        nextScene = 1;
-      }
-      return state[state.current.day].scenes[nextScene];
-    },
-    nextSceneAlt: state => {
-      var sceneCount = Object.keys(state[state.current.day].scenes).length;
       var nextSceneId = state.current.scene + 1;
 
       // Event Trailer Check (some event trailers are disabled)
@@ -268,16 +260,19 @@ export const store = new Vuex.Store({
         if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
           nextSceneId += 1;
         }
+      } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
+        if (state[state.current.day].scenes[nextSceneId].event.display != true) {
+          nextSceneId += 1;
+        }
       }
 
-      // Loop Scene ID
+      // // Loop Scene ID
       if (nextSceneId > sceneCount) {
         nextSceneId = nextSceneId - sceneCount;
       }
 
       return state[state.current.day].scenes[nextSceneId];
     },
-
     skipNextScene: state => {
       var skipScene = false;
       var nextSceneId = state.current.scene + 1;
@@ -287,11 +282,7 @@ export const store = new Vuex.Store({
         if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
           skipScene = true;
         }
-      }
-
-      // Special Events Check (some special events are disabled)
-      if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
-
+      } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
         if (state[state.current.day].scenes[nextSceneId].event.display != true) {
           skipScene = true;
         }
@@ -301,7 +292,6 @@ export const store = new Vuex.Store({
       return skipScene;
     }
   },
-
   mutations: {
     setScene: (state, payload) => {
       state.current.scene = payload;
@@ -310,8 +300,6 @@ export const store = new Vuex.Store({
       state.current.day = payload;
     },
     FETCH_EVENTS(state, events) {
-      console.log("trailer data fetched: ", events);
-
       // Set event lists up (a single event list repeats)
       state[state.current.day].scenes[3].lists[1].events = events.events;
       state[state.current.day].scenes[6].lists[1].events = events.events;
