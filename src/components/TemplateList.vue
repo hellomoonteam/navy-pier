@@ -11,7 +11,7 @@
       <div class="events" id="events" v-bind:style="{ marginTop: topMargin }">
           <div
             v-for="(item, index) in activeList.events"
-            v-bind:key="item.title"
+            v-bind:key="item.title + index"
              v-bind:class="{ offscreen: index <= eventsOffscreen }"
             class="event"
           >

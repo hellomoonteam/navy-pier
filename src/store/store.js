@@ -256,17 +256,19 @@ export const store = new Vuex.Store({
       var nextSceneId = state.current.scene + 1;
 
       // Event Trailer Check (some event trailers are disabled)
-      if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
-        if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
-          nextSceneId += 1;
-        }
-      } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
-        if (state[state.current.day].scenes[nextSceneId].event.display != true) {
-          nextSceneId += 1;
+      if (state[state.current.day].scenes[nextSceneId]) {
+        if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
+          if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
+            nextSceneId += 1;
+          }
+        } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
+          if (state[state.current.day].scenes[nextSceneId].event.display != true) {
+            nextSceneId += 1;
+          }
         }
       }
 
-      // // Loop Scene ID
+      // Loop Scene ID
       if (nextSceneId > sceneCount) {
         nextSceneId = nextSceneId - sceneCount;
       }
@@ -274,18 +276,25 @@ export const store = new Vuex.Store({
       return state[state.current.day].scenes[nextSceneId];
     },
     skipNextScene: state => {
-      var skipScene = false;
+      var sceneCount = Object.keys(state[state.current.day].scenes).length;
       var nextSceneId = state.current.scene + 1;
+      var skipScene = false;
 
       // Event Trailer Check (some event trailers are disabled)
-      if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
-        if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
-          skipScene = true;
+      if (state[state.current.day].scenes[nextSceneId]) {
+        if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
+          if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
+            skipScene = true;
+          }
+        } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
+          if (state[state.current.day].scenes[nextSceneId].event.display != true) {
+            skipScene = true;
+          }
         }
-      } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
-        if (state[state.current.day].scenes[nextSceneId].event.display != true) {
-          skipScene = true;
-        }
+      }
+
+      if (nextSceneId > sceneCount) {
+        nextSceneId = nextSceneId - sceneCount;
       }
 
       // returns a boolean indicating if the next scene should be skipped
