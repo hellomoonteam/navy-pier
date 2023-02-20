@@ -36,6 +36,18 @@ $screen: 640px;
   left: ($gutter * 3) + ($screen * 3);
 }
 
+// Stats
+.stats {
+  background: white;
+  position: absolute;
+  z-index: 100;
+  top: 1320px;
+  left: 20px;
+}
+.stats p {
+  color: #000;
+}
+
 // Typography
 h1, h2, h3, h4, p {
   position: relative;
