@@ -1,7 +1,7 @@
 <template>
   <div>
-    <video ref="player1" :src="player1Source" v-bind:class="{ active: player1Active == true, visible: player1Visible == true }" width="3320" height="1280" autoplay />
-    <video ref="player2" :src="player2Source" v-bind:class="{ active: player1Active == false, visible: player2Visible == true }"  width="3320" height="1280" autoplay />
+    <video ref="player1" :src="player1Source" v-bind:class="{ active: player1Active == true, visible: player1Visible == true }" width="3320" height="1280" autoplay muted />
+    <video ref="player2" :src="player2Source" v-bind:class="{ active: player1Active == false, visible: player2Visible == true }"  width="3320" height="1280" autoplay muted />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ PreFade (2s before end of scene)
     Fade next up and play
 Cycle (at end of scene)
     Stop inactivePlayer
-
+    
 */
 export default {
   data: function() {
