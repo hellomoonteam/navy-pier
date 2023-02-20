@@ -19,7 +19,7 @@
             <h3 v-if="item.subtitle" v-html="item.subtitle"></h3>
             <h4 v-if="item.logistics" v-html="item.logistics"></h4>
             <p v-if="item.description" v-html="item.description"></p>
-            <img v-if="item.logo" :src="'/static/' + item.logo" />
+            <img v-if="item.logo" :src="item.logo" />
           </div>
       </div>
     </div>
