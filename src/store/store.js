@@ -269,11 +269,11 @@ export const store = new Vuex.Store({
       // Event Trailer Check (some event trailers are disabled)
       if (state[state.current.day].scenes[nextSceneId]) {
         if (state[state.current.day].scenes[nextSceneId].template == 'TrailerList') {
-          if (state[state.current.day].scenes[nextSceneId].lists[1].display != true) {
+          if (state[state.current.day].scenes[nextSceneId].lists[1].display === false) {
             skipScene = true;
           }
         } else if (state[state.current.day].scenes[nextSceneId].template == 'TemplateEvent') {
-          if (state[state.current.day].scenes[nextSceneId].event.display != true) {
+          if (state[state.current.day].scenes[nextSceneId].event.display === false) {
             skipScene = true;
           }
         }
