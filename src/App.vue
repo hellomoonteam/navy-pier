@@ -19,6 +19,12 @@
     <div class="screen-d">
       <component :is="this.activeScene.template4"></component>
     </div>
+
+    <!-- stats -->
+    <!-- <div class="stats">
+      <p>Current: {{this.currentScene}}</p>
+      <p>Active: {{this.activeScene}}</p>
+    </div> -->
   </div>
 </template>
 
