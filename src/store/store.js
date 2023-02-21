@@ -14,14 +14,12 @@ export const store = new Vuex.Store({
         1: {
           name: 'welcome1',
           template: 'video',
-          template4: null,
           background: 'welcome_1.mp4',
           duration: '61'
         },
         2: {
           name: 'event1',
           template: 'TemplateEvent',
-          template4: null,
           background: 'event_1.mp4',
           duration: '58',
           event: {
@@ -33,7 +31,6 @@ export const store = new Vuex.Store({
         3: {
           name: 'program1',
           template: 'TemplateList',
-          template4: null,
           background: 'program_1.mp4',
           duration: '91',
           lists: {
@@ -54,7 +51,6 @@ export const store = new Vuex.Store({
         4: {
           name: 'trailer1',
           template: 'TrailerList',
-          template4: null,
           background: 'trailer_1.mp4',
           duration: '48',
           lists: {
@@ -76,14 +72,12 @@ export const store = new Vuex.Store({
         5: {
           name: 'branding2',
           template: 'video',
-          template4: null,
           background: 'branding_2.mp4',
           duration: '33'
         },
         6: {
           name: 'program2',
           template: 'TemplateList',
-          template4: null,
           background: 'program_2.mp4',
           duration: '91',
           lists: {
@@ -104,7 +98,6 @@ export const store = new Vuex.Store({
         7: {
           name: 'trailer2',
           template: 'TrailerList',
-          template4: null,
           background: 'trailer_2.mp4',
           duration: '48',
           lists: {
@@ -126,14 +119,12 @@ export const store = new Vuex.Store({
         8: {
           name: 'welcome3',
           template: 'video',
-          template4: null,
           background: 'welcome_3.mp4',
           duration: '61'
         },
         9: {
           name: 'event2',
           template: 'TemplateEvent',
-          template4: null,
           background: 'event_2.mp4',
           duration: '58',
           event: {
@@ -145,7 +136,6 @@ export const store = new Vuex.Store({
         10: {
           name: 'program3',
           template: 'TemplateList',
-          template4: null,
           background: 'program_3.mp4',
           duration: '91',
           lists: {
@@ -166,7 +156,6 @@ export const store = new Vuex.Store({
         11: {
           name: 'trailer3',
           template: 'TrailerList',
-          template4: null,
           background: 'trailer_3.mp4',
           duration: '48',
           lists: {
@@ -188,14 +177,12 @@ export const store = new Vuex.Store({
         12: {
           name: 'branding4',
           template: 'video',
-          template4: null,
           background: 'branding_4.mp4',
           duration: '33'
         },
         13: {
           name: 'program4',
           template: 'TemplateList',
-          template4: null,
           background: 'program_4.mp4',
           duration: '91',
           lists: {
@@ -216,7 +203,6 @@ export const store = new Vuex.Store({
         14: {
           name: 'trailer4',
           template: 'TrailerList',
-          template4: null,
           background: 'trailer_4.mp4',
           duration: '48',
           lists: {
@@ -292,7 +278,7 @@ export const store = new Vuex.Store({
           }
         }
       }
-
+      
       if (nextSceneId > sceneCount) {
         nextSceneId = nextSceneId - sceneCount;
       }

@@ -27,10 +27,7 @@ import BackgroundVids from './components/BackgroundVids.vue';
 import TemplateVideo from './components/TemplateVideo.vue';
 import TrailerList from './components/TrailerList.vue';
 import TemplateList from './components/TemplateList.vue';
-import TemplateCountdown from './components/TemplateCountdown.vue';
 import TemplateBlank from './components/TemplateBlank.vue';
-import TemplateFireworksTitleLeft from './components/TemplateFireworksTitleLeft.vue';
-import TemplateFireworksTitleRight from './components/TemplateFireworksTitleRight.vue';
 import TemplateEvent from './components/TemplateEvent.vue';
 
 export default {
@@ -53,10 +50,7 @@ export default {
     TemplateVideo,
     TemplateList,
     TrailerList,
-    TemplateCountdown,
     TemplateBlank,
-    TemplateFireworksTitleLeft,
-    TemplateFireworksTitleRight,
     TemplateEvent
   },
   created: function () {
